@@ -1,0 +1,66 @@
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.flip {
+  animation: flip 0.5s ease-in-out;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff; /* ✅ 保持全站白底 */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ✅ Hero 區塊調整為純白底 + 深色文字 */
+.hero {
+  background-color: #ffffff;
+  color: #222;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ✅ footer 改為白底或透明 */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}

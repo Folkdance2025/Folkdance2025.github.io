@@ -1,0 +1,150 @@
+
+{
+  "siteTitle": "2025 Kinmen World Folk Dance Tourism and Arts Festival",
+  
+  "title": "2025 Kinmen World Folk Dance Tourism and Arts Festival",
+  "slogan": "Dancing Across the World, Preserving Culture",
+  "date": "August 22–24, 2025",
+  "nav": {
+    "home": "Home",
+    "dinner": "Banquet & Dance Party",
+    "forum": "International Forum",
+    "show": "Dance Showcase",
+    "party": "Cultural Exchange"
+  },
+  
+  "countdown": {
+    "title": "Countdown",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  
+
+  "footer": {
+  "organizer": "Organizer: Taiwan World Folk Culture Association",
+  "copyright": "© 2025 Kinmen World Folk Dance Festival. All rights reserved.",
+  "facebook": "Share on Facebook",
+  "note": "🎉 We look forward to your enthusiastic participation. Let's dance the world together!"
+}
+,
+  "about": {
+    "title": "About Folk Dance",
+    "paragraphs": [
+       "The term 'World Folk Dance' is derived from the English 'Folk Dance.' Its formation is influenced by geography, climate, customs, and historical background, resulting in a variety of unique dance forms. Therefore, the folk dances passed down by various ethnic groups around the world are known as 'World Folk Dance,' also referred to in various regions as 'folk dances' or 'traditional dances.'",
+      "In 1957 (Republic of China Year 46), Rickey Holden, an international folk dance expert, introduced World Folk Dance to Taiwan. Since then, it has taken root and flourished on the island, developing a history of over sixty years.",
+      "Between the 1960s and 1980s, under the promotion of renowned Taiwanese folk dancers such as Chang Ching-san, Yang Chang-hsiung, and Chen Ji, along with strong support from the China Youth Corps, World Folk Dance became one of the most popular recreational activities at the time. Especially in university student clubs, folk dance clubs ranked among the largest and most active. During summer and winter breaks, activities organized by the China Youth Corps almost always included folk dance as an essential program.",
+      "As times changed, World Folk Dance gradually declined, replaced by the now-popular 'mom dances' in community alleys and 'street dance' (also known as 'hip-hop') that are favored by younger generations. Thus, World Folk Dance has become an important memory for those born in the 1960s and 70s, marking a significant and unforgettable chapter in the social and folk development history of Taiwan.",
+      "Although World Folk Dance is no longer as popular as it was during its golden age, a number of university and community clubs still carry the torch. They continue to promote and practice the art through club showcases, regular activities, international dance camps, and weekend social gatherings.",
+      "In 2017 (Republic of China Year 106), the Carnation World Folk Dance Promotion Association, a self-organized club in Taichung, celebrated its 25th anniversary. This grand event gathered community clubs from Taichung and Kaohsiung for a World Folk Dance showcase, receiving high praise and fostering cohesion and mutual exchange among participating groups.",
+      "The following year, the Kinmen County Sports Association’s World Folk Dance Association took over the event and officially named it the '2017 Kinmen World Folk Dance Tourism and Arts Festival'. It brought together over 400 dancers from across the Taiwan Strait, boosting Kinmen’s tourism industry and becoming a culturally significant event with multiple layers of value.",
+      "In 2018, the 'Joyful Dancers' from Kaohsiung continued the legacy by hosting the '2018 Kaohsiung World Folk Dance Tourism and Arts Festival', helping local residents understand that folk dance reflects cultural lifestyles, rituals, costumes, and ethnic philosophies.",
+      "In 2019, the event was organized by Hong Kong’s Global Arts European Ethnic Dance Group, and in addition to performers from Taiwan, Kinmen, Mainland China, and Hong Kong, the festival welcomed groups from Singapore and Malaysia, establishing the event as a platform for annual cultural exchange and friendship among World Folk Dance enthusiasts.",
+      "The '2020 Taichung World Folk Dance Tourism and Arts Festival' was originally scheduled to be held but was canceled due to the COVID-19 pandemic. After a three-year hiatus from 2020 to 2022, the event resumed in 2023 as the pandemic eased and international borders reopened. With the support of organizations in Singapore and Malaysia, Wu Guo-Ji, founder of the Singaporean 'Yingsi Dance Society,' organized the '2023 Singapore-Malaysia World Folk Dance Tourism and Arts Festival.'",
+      "This edition continued the festival’s signature features, combining urban culture, local traditions, and World Folk Dance to allow participants from around the globe to experience the beautiful integration and harmony of the host city’s culture, space, and international folk dance.",
+      "Originally rotating among Taichung, Kinmen, Kaohsiung, and Hong Kong, the festival welcomed Singapore and Malaysia as new host regions in 2023. Participating groups and individuals come from Taiwanese, Kinmenese, Hong Kong, Mainland Chinese (Putian, Shanghai), Singaporean, Malaysian, Australian, American, and Canadian Chinese communities. The event has become an important platform for global Chinese communities to connect and understand one another.",
+      "After being successfully held in Taichung (2016), Kinmen (2017), Kaohsiung (2018), Hong Kong (2019), and Singapore/Malaysia (2023), the event, due to its large manpower and financial requirements and the lack of public funding, has been adjusted to be held biennially. It is hoped that by compiling related materials and consolidating resources, the series can be sustained long-term, offering a gathering and exchange platform for folk dance lovers across the Chinese-speaking world. In 2025, the festival will return to Kinmen as the host.",
+      "The 2025 event is scheduled to be held from August 22 to 24, lasting three days, with optional city and cultural experiences extending the trip to five to seven days. Planned highlights include a welcome dinner and dance party, a World Folk Dance International Forum, folk dance performances, a folk culture market, and cultural exchange activities. The goal is to help global Chinese communities appreciate that Taiwan and Kinmen’s folk culture can coexist and complement the world’s diverse folk traditions—contributing to broadening international perspectives and enhancing awareness of local cultural characteristics."
+    
+    ]
+  },
+  "scheduleTitle": "2025 International Folk Dance Forum Agenda",
+  "speakerTitle": "Keynote Speakers",
+  "table": {
+    "time": "Time",
+    "topic": "Agenda",
+    "note": "Note"
+  },
+  "name": {
+    "huang": "Wen-Hung Huang",
+    "kk": "Ng Kwok-Kei (KK)",
+    "su": "Yue-Miao Su",
+    "tsang": "To be invited",
+    "hsu": "Wen-Hung Hsu",
+    "iliana": "Iliana Bozhanova"
+  },
+  "schedule": {
+  "1": "Registration",
+  "1_note": "Hosted by the organizer",
+  "2": "Opening Remarks",
+  "2_note": "Remarks from hosts and distinguished guests",
+  "3": "Keynote Presentation (Taiwan)",
+  "3_note":"Wen-Hung Huang",
+  "4": "Break",
+  "4_note": "Refreshments Provided",
+  "5": "Heritage and Continuation",
+  "5_note":"Ng Kwok-Kei (KK)",
+  "6": "Curriculum Design and Practice",
+  "6_note":"Yue-Miao Su",
+  "7": "Keynote Presentation",
+  "7_note": "To be invited",
+  "8": "Lunch",
+  "8_note": "Lunchbox Provided",
+  "9": "Sharing of Folk Dance Experiences",
+  "9_note":"Wen-Hung Hsu",
+  "10": "The Transmission of Bulgarian Folk Dance",
+  "10_note":"Iliana Bozhanova",
+  "11": "Forum Closing and Declaration",
+  "11_note": "All Participants"
+},
+  "bio": {
+    "huang": "A graduate of the School of Pharmacy at Kaohsiung Medical College, Huang Wen-Hung has been actively engaged in the promotion and education of international folk dance since 1983. With a career spanning over four decades, he has been a driving force in Taiwan’s folk dance community, serving as faculty advisor to folk dance clubs at numerous institutions including Wenzao Ursuline College of Languages, National Chung Hsing University, National Taichung University of Education, Providence University, Tunghai University, National Tsing Hua University, and National Chiao Tung University.\n\nHuang has also held long-standing faculty roles at many of Taiwan’s premier dance camps, including the Taiwan Asian Folk Dance Camp, Pan-Asian Dance Camp, National Ilan University’s World Dance Camp, and the Sun Moon Lake Teachers’ Dance Workshop. His international contributions include conducting workshops and cultural exchanges in the United States, Japan, and Hawaiʻi. In 2005, he served as Deputy Leader and interpreter for Taiwan’s delegation to the 9th National Festival of Bulgarian Folklore.\n\nIn 1991, he founded the Carnation International Folk Dance Promotion Association, followed by the establishment of the Taichung International Folk Dance Promotion Association in 2001, where he served as founding president. In 2004, he launched the “Timeless Dance Ensemble – Huang Wen-Hung Dance Studio,” through which he has continued to innovate, teach, and promote international folk dance. He is widely regarded as a leading figure in the preservation and development of folk dance in Taiwan.",
+    "kk": "Since 1976, KK has been dedicated to the teaching and promotion of folk dance, amassing over four decades of extensive experience across Hong Kong, Taiwan, Singapore, Malaysia, Japan, the United States, and Bulgaria. Beginning in 1981, he studied under numerous internationally renowned dance masters, specializing in folk dances from Israel, the Balkans, Eastern Europe, and Central Asia. He served as President of the Hong Kong Sui Ying Western Folk Dance Group and has frequently been invited as an instructor and guest performer at international dance camps and competitions.\n\nKK holds multiple professional certifications from the Imperial Society of Teachers of Dancing (ISTD) in the United Kingdom. Deeply committed to the democratization of folk dance education, he has led large-scale children’s dance training programs in Johor Bahru and offered dance instruction at orphanages, demonstrating a profound sense of social responsibility. His teaching style blends ethnic cultural heritage with the artistry of movement, earning the admiration and respect of students around the world.",
+    "su": "Su Yue-Miao has been devoted to the promotion of folk dance since her university years as a member of the Folk Dance Club at Soochow University. Throughout her career in elementary education, she has been a passionate advocate for integrating traditional folk dance into the school curriculum, emphasizing its role in cultural education and community engagement.\n\nShe has taught at several elementary schools in Changhua County, including Xishi, Pinghe, and Jingxiu Elementary Schools. She later served as Director at Daxi Elementary School and subsequently as Principal at Xinsheng, Nanya, and Yongjing Elementary Schools.\n\nWith decades of hands-on experience in the field, Ms. Su is recognized for her ability to cultivate cultural literacy through folk dance at the grassroots level. Her contributions have played a vital role in the preservation and transmission of intangible cultural heritage within Taiwan’s elementary education system.",
+    "tsang": "",
+    "hsu": "Professor Hsu Wen-Hung has long been dedicated to the promotion of folk dance and cross-cultural exchange. He once served as the president of the Folk Dance Club at National Central University, editor of Oro Newsletter, and general coordinator for multiple sessions of the Pan-Asia Folk Dance Camp. Balancing roles as educator, administrator, and international liaison, he served as Secretary-General of the International Folk Dance Association of the Republic of China (Taiwan) for 12 years, followed by 3 years as its President. He also held two terms as President of the association’s Yilan County branch.\n\nProfessor Hsu's international footprint spans the United States, Japan, Singapore, Africa, and Europe. He has represented Taiwan at numerous international dance camps and cultural festivals, conducting lectures and workshops. Notably, he has traveled to Japan five times and to Singapore twice to promote Taiwanese folk dance. Since 2007, he has actively engaged in academic research and publication, authoring several papers and publishing the book *Appreciating Folk Dance*.\n\nIn addition to his frequent participation in international exchange programs abroad, he has consistently invited folk dance instructors from Europe, Asia, and the Americas to Taiwan for cultural exchange and workshops, thereby enriching Taiwan’s folk dance scene with a broader global perspective. He currently serves as Executive Director of the International Folk Dance Association of the Republic of China (Taiwan), Director of the Yilan County branch, advisor to the Haiyun Folk Dance Club at National Ilan University, and Folk Dance Consultant for the Yilan International Children's Folklore and Folkgame Festival.",
+    "iliana": "Born in 1961 into a musical family in Galabovo, southern Thrace, Iliana Bozhanova is a renowned Bulgarian folk dance educator and choreographer. She graduated from the National School for Art Instructors and later earned both her Bachelor's and Master's degrees from Plovdiv’s Academy of Music, Dance, and Fine Arts, specializing in Bulgarian traditional music and dance.\n\nAt the age of 16, she joined the celebrated Rûchenitsa Folk Dance Ensemble in Plovdiv, performing extensively across Bulgaria and abroad in countries such as Greece, Serbia, Poland, Belgium, Portugal, France, Italy, the Netherlands, and Russia. In 1981, she began choreographing for two youth ensembles in Yoakim Gruevo village and at the Rosa Dimitrova Orphanage. In October 2004, she became the artistic director of the Voivodintsi ensemble, which features over 130 dancers ranging in age from 4 to 76.\n\nOver the years, Iliana has collaborated with numerous dance organizations and cultural institutions across the world, including in the Netherlands, Norway, Japan, Taiwan, Hong Kong, Switzerland, Germany, Canada, and the United States. She has also served as a guest lecturer at various universities.\n\nCurrently, she is the dance director of the International Folk Dance Camp at the Plovdiv Academy of Music, Dance, and Fine Arts, while continuing to work professionally in architectural drafting. Her teaching is deeply rooted in authenticity, cultural context, and pedagogical clarity, making her one of the most respected ambassadors of Bulgarian folk dance worldwide.\n\nFor more information, please visit: www.ilianabozhanova.com"
+  },
+    "show": {
+    "title": "International Folk Dance Showcase",
+    "group": "Group Name",
+    "region": "Region",
+    "note": " Notes",
+    "remark": "*Groups may be subject to change.",
+    "groups": [
+      { "name": "Taichung Dance Heart Folk Dance Class", "region": "Taichung", "note": "Instructor Ou Guangqing" },
+      { "name": "Kaohsiung Happy Dancers", "region": "Kaohsiung", "note": "Instructor Lu Yuhong" },
+      { "name": "Kaohsiung Bagpipe Folk Dance Troupe", "region": "Kaohsiung", "note": "Instructor Lin Qiuping" },
+      { "name": "Kinmen Tangfeng Dance Troupe", "region": "Kinmen", "note": "Instructor Qiu Yitang" },
+      { "name": "Hong Kong Talents Workshop", "region": "Hong Kong", "note": "Instructor Li Guanghua" },
+      { "name": "Hong Kong Arts & Culture Workshop", "region": "Hong Kong", "note": "Instructor Zhou Quanhui" },
+      { "name": "Hong Kong Rising Western Folk Dance Troupe", "region": "Hong Kong", "note": "Instructor Zeng Jinquan" },
+      { "name": "Malaysia InSync Dance Society", "region": "Malaysia", "note": "Instructor Wu Guoji" },
+      { "name": "Putian College Folk Dance Club", "region": "Putian", "note": "Instructor Zheng Ruoyi" },
+      { "name": "Indonesian Student Association, NQU", "region": "Kinmen", "note": "—" }
+    ]
+  },
+  
+    "venue": {
+    "title": "📍Forum Venue",
+    "name": "https://maps.app.goo.gl/3bSG5JTDR7NrYnKT6",
+    "linkText": "National Quemoy University International Conference Hall"
+  },
+  "venue_show": {
+  "title": "📍Event Venue",
+  "name": "https://maps.app.goo.gl/p83C9wMyoK7ueTh56",
+  "linkText": "Kinmen Cultural Affairs Bureau Auditorium"
+},
+  "dinner": {
+    "title": "Welcome Dinner & Dance Gala",
+    "description": "This is the description of the Welcome Dinner & Dance Gala..."
+  },
+  "venue_dinner": {
+    "title": "📍Event Venue",
+    "name": "https://maps.app.goo.gl/QcJANvV6aEnF5e8XA",
+    "linkText": "Kinmen County Jincheng Sports Complex"
+  },
+   "party": {
+    "title": "Cultural Exchange Party",
+    "description": "This is the description of the cultural exchange event..."
+  },
+  "venue_party": {
+    "title": "📍Event Venue",
+    "name": "https://maps.app.goo.gl/QcJANvV6aEnF5e8XA",
+    "linkText": "Jincheng Sports Center, Kinmen County"
+  }
+
+  
+  
+}
