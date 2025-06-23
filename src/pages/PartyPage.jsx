@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -9,13 +8,22 @@ export default function PartyPage() {
 
   return (
     <Box sx={{ py: 8, px: 2, textAlign: "center" }}>
-      <Typography variant="h4" fontWeight="bold" fontSize="2.2rem" gutterBottom>
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        fontSize="2.2rem"
+        gutterBottom
+      >
         {t("party.title")}
       </Typography>
 
       {/* 活動地點 */}
       <Box sx={{ mt: 2, mb: 4 }}>
-        <Typography variant="h6" fontSize="1.8rem" fontWeight="bold">
+        <Typography
+          variant="h6"
+          fontSize="1.8rem"
+          fontWeight="bold"
+        >
           {t("venue_party.title")}：
         </Typography>
         <Typography variant="body1" fontSize="1.4rem">
@@ -31,21 +39,15 @@ export default function PartyPage() {
       </Box>
 
       {/* 活動內容說明 */}
-      <Typography variant="body1" fontSize="1.3rem" sx={{ maxWidth: 800, mx: "auto", mb: 6 }}>
+      <Typography
+        variant="body1"
+        fontSize="1.3rem"
+        sx={{ maxWidth: 800, mx: "auto", mb: 6 }}
+      >
         {t("party.description")}
       </Typography>
 
       <BackHomeButton />
     </Box>
-=======
-import BackHomeButton from "../components/BackHomeButton";
-export default function PartyPage() {
-  return (
-    <div style={{ padding: "60px", textAlign: "center" }}>
-      <h1>聯歡交流</h1>
-      <p>這裡是聯歡活動的說明...</p>
-      <BackHomeButton/>
-    </div>
->>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
   );
 }
