@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -36,5 +37,15 @@ export default function PartyPage() {
 
       <BackHomeButton />
     </Box>
+=======
+import BackHomeButton from "../components/BackHomeButton";
+export default function PartyPage() {
+  return (
+    <div style={{ padding: "60px", textAlign: "center" }}>
+      <h1>聯歡交流</h1>
+      <p>這裡是聯歡活動的說明...</p>
+      <BackHomeButton/>
+    </div>
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
   );
 }

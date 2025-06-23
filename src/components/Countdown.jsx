@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { Box, Typography, Grid, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -5,6 +6,14 @@ import { useTranslation } from "react-i18next";
 export default function Countdown() {
   const { t } = useTranslation();
 
+=======
+// src/components/Countdown.jsx
+import { useEffect, useState } from "react";
+import { Box, Typography, Grid, Paper } from "@mui/material";
+
+
+export default function Countdown() {
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
   const [time, setTime] = useState({
     days: "00",
     hours: "00",
@@ -41,6 +50,10 @@ export default function Countdown() {
         seconds: padZero(Math.floor((diff / 1000) % 60)),
       };
 
+<<<<<<< HEAD
+=======
+      // 檢查變化後開啟 flip 動畫
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
       setFlip({
         days: newTime.days !== time.days,
         hours: newTime.hours !== time.hours,
@@ -59,7 +72,11 @@ export default function Countdown() {
       <Paper
         elevation={6}
         sx={{
+<<<<<<< HEAD
           minHeight: 140,
+=======
+          height: 130,
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -67,15 +84,26 @@ export default function Countdown() {
           bgcolor: "primary.main",
           color: "primary.contrastText",
           borderRadius: 2,
+<<<<<<< HEAD
           p: { xs: 2, sm: 3 },
+=======
+          p: 2,
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
           transition: "transform 0.3s",
         }}
       >
         <Typography
+<<<<<<< HEAD
           fontWeight="bold"
           className={flip[flipKey] ? "flip" : ""}
           sx={{
             fontSize: { xs: "2.8rem", sm: "3.2rem", md: "3.6rem" },
+=======
+          variant="h4"
+          fontWeight="bold"
+          className={flip[flipKey] ? "flip" : ""}
+          sx={{
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
             borderBottom: "2px solid rgba(255,255,255,0.3)",
             pb: 1,
             mb: 1,
@@ -85,6 +113,7 @@ export default function Countdown() {
         >
           {value}
         </Typography>
+<<<<<<< HEAD
         <Typography
           sx={{
             fontSize: { xs: "1.1rem", sm: "1.2rem" },
@@ -93,6 +122,9 @@ export default function Countdown() {
         >
           {label}
         </Typography>
+=======
+        <Typography variant="body1">{label}</Typography>
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
       </Paper>
     </Grid>
   );
@@ -106,6 +138,7 @@ export default function Countdown() {
         color: "text.primary",
       }}
     >
+<<<<<<< HEAD
       <Typography
         variant="h5"
         sx={{
@@ -115,6 +148,10 @@ export default function Countdown() {
         }}
       >
         ⏳ {t("countdown.title")}
+=======
+      <Typography variant="h5" sx={{ mb: 4 }}>
+        ⏳ 活動倒數
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
       </Typography>
 
       <Grid
@@ -124,10 +161,17 @@ export default function Countdown() {
         maxWidth="600px"
         margin="0 auto"
       >
+<<<<<<< HEAD
         {renderBlock(t("countdown.days"), time.days, "days")}
         {renderBlock(t("countdown.hours"), time.hours, "hours")}
         {renderBlock(t("countdown.minutes"), time.minutes, "minutes")}
         {renderBlock(t("countdown.seconds"), time.seconds, "seconds")}
+=======
+        {renderBlock("天", time.days, "days")}
+        {renderBlock("時", time.hours, "hours")}
+        {renderBlock("分", time.minutes, "minutes")}
+        {renderBlock("秒", time.seconds, "seconds")}
+>>>>>>> f2accc473efe2efcea7ff95dae32345f8059d464
       </Grid>
     </Box>
   );
