@@ -55,11 +55,11 @@ export default function Countdown() {
   }, [time]);
 
   const renderBlock = (label, value, flipKey) => (
-    <Grid item xs={6} sm={3} key={label}>
+    <Grid item xs={12} sm={6} md={3} key={label}>
       <Paper
         elevation={6}
         sx={{
-          minHeight: 140,
+          minHeight: { xs: 100, sm: 120, md: 140 },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -75,7 +75,7 @@ export default function Countdown() {
           fontWeight="bold"
           className={flip[flipKey] ? "flip" : ""}
           sx={{
-            fontSize: { xs: "2.8rem", sm: "3.2rem", md: "3.6rem" },
+            fontSize: { xs: "2.4rem", sm: "3rem", md: "3.6rem" },
             borderBottom: "2px solid rgba(255,255,255,0.3)",
             pb: 1,
             mb: 1,
@@ -87,7 +87,7 @@ export default function Countdown() {
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: "1.1rem", sm: "1.2rem" },
+            fontSize: { xs: "1rem", sm: "1.1rem" },
             fontWeight: 500,
           }}
         >
@@ -119,7 +119,7 @@ export default function Countdown() {
 
       <Grid
         container
-        spacing={3}
+        spacing={{ xs: 2, sm: 3 }}
         justifyContent="center"
         maxWidth="600px"
         margin="0 auto"
