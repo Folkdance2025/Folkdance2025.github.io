@@ -17,6 +17,7 @@ import {
   MenuItem,
   useMediaQuery,
   useTheme,
+  ButtonGroup,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
@@ -43,11 +44,10 @@ export default function AppBarNav() {
 
   const { i18n, t } = useTranslation();
   const currentLang = i18n.language;
-  const toggleLanguage = () => {
-    i18n.changeLanguage(currentLang === "zh" ? "en" : "zh");
+  const setLanguage = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
-  const langIcon = currentLang === "zh" ? "🇹🇼" : "🇺🇸";
   const logo = currentLang === "zh" ? logoZh : logoEn;
 
   const navItems = [
@@ -64,6 +64,44 @@ export default function AppBarNav() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  const LangButtons = (
+    <ButtonGroup
+      variant="outlined"
+      size="small"
+      sx={{
+        borderRadius: "6px",
+        backgroundColor: "rgba(255,255,255,0.15)",
+        "& button": {
+          color: "#fff",
+          borderColor: "#fff",
+          fontWeight: "bold",
+          fontSize: "0.8rem",
+          px: 1.5,
+          py: 0.5,
+          borderRadius: "6px",
+        },
+        "& button.Mui-disabled": {
+          color: "#000",
+          backgroundColor: "#fff",
+          borderColor: "#fff",
+        },
+      }}
+    >
+      <Button
+        onClick={() => setLanguage("zh")}
+        disabled={currentLang === "zh"}
+      >
+        🇹🇼 中文
+      </Button>
+      <Button
+        onClick={() => setLanguage("en")}
+        disabled={currentLang === "en"}
+      >
+        🇺🇸 ENGLISH
+      </Button>
+    </ButtonGroup>
+  );
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -82,6 +120,7 @@ export default function AppBarNav() {
           justifyContent: "flex-start",
         }}
       >
+        {/* 桌面版 AppBar */}
         {!isMobile && (
           <AppBar
             position="fixed"
@@ -146,12 +185,7 @@ export default function AppBarNav() {
                       anchorEl={anchorEl}
                       open={menuOpen}
                       onClose={handleMenuClose}
-                      PaperProps={{
-                        sx: {
-                          backgroundColor: "#333", // 深色背景
-                          color: "#fff",           // 白色字體
-                        },
-                      }}
+                      PaperProps={{ sx: { backgroundColor: "#333", color: "#fff" } }}
                     >
                       {navItems.map((item) => (
                         <MenuItem
@@ -167,20 +201,15 @@ export default function AppBarNav() {
                     </Menu>
                   </>
                 )}
-                <IconButton
-                  color="inherit"
-                  onClick={toggleLanguage}
-                  aria-label="Toggle language"
-                  sx={{ fontSize: "1.5rem" }}
-                >
-                  <Typography fontSize="1.5rem">{langIcon}</Typography>
-                </IconButton>
+
+                {/* 語言切換按鈕群組 */}
+                {LangButtons}
               </Stack>
             </Toolbar>
           </AppBar>
         )}
 
-        {/* Mobile Drawer 保持不變 */}
+        {/* 手機版 Drawer + 語言切換按鈕 */}
         {isMobile && (
           <>
             <IconButton
@@ -188,10 +217,16 @@ export default function AppBarNav() {
               color="inherit"
               aria-label="Open drawer"
               onClick={() => setDrawerOpen(true)}
-              sx={{ position: "absolute", top: 20, left: 20, zIndex: 3 }}
+              sx={{ position: "absolute", top: 20, left: 20, zIndex: 3, color: "#fff" }}
             >
               <MenuIcon fontSize="large" />
             </IconButton>
+
+            {/* 手機右上語言切換 */}
+            <Box sx={{ position: "absolute", top: 20, right: 20, zIndex: 3 }}>
+              {LangButtons}
+            </Box>
+
             <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
               <Box sx={{ width: 260 }} role="presentation">
                 <Box
@@ -218,14 +253,6 @@ export default function AppBarNav() {
                       </ListItemButton>
                     </ListItem>
                   ))}
-                  <ListItem disablePadding>
-                    <ListItemButton onClick={toggleLanguage} aria-label="Toggle language">
-                      <ListItemText
-                        primary={langIcon + " Language"}
-                        primaryTypographyProps={{ fontSize: "1.2rem", fontWeight: "medium" }}
-                      />
-                    </ListItemButton>
-                  </ListItem>
                 </List>
               </Box>
             </Drawer>
