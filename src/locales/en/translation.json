@@ -23,7 +23,7 @@
   
 
   "footer": {
-  "organizer": "Organizer: Taiwan World Folk Culture Association",
+  "organizer": "Organizer: Kinmen County Sports Association ｜ Taiwan World Folk Culture Association",
   "copyright": "© 2025 Kinmen World Folk Dance Festival. All rights reserved.",
   "facebook": "Share on Facebook",
   "note": "🎉 We look forward to your enthusiastic participation. Let's dance the world together!"
@@ -143,7 +143,17 @@
     "title": "📍Event Venue",
     "name": "https://maps.app.goo.gl/QcJANvV6aEnF5e8XA",
     "linkText": "Jincheng Sports Center, Kinmen County"
-  }
+  },
+  "button": {
+  "more": "Read More",
+  "hide": "Hide"
+},
+"more": {
+  "hsu": "• President of the Folk Dance Club, National Central University\n• Editor of Auro Folk Dance Bulletin\n• General Director of the 36th, 38th, and 40th Asia Folk Dance Camps\n• Instructor at Asia Folk Dance Camp, Sun Moon Lake Folk & Ballroom Dance Camp, Northern Taiwan University Joint Leadership Camp, and National University Folk Dance Instructor Workshop\n• Secretary-General (12 years) and President (3 years) of the Republic of China International Folk Dance Association\n• President of the Yilan County International Folk Dance Association for 2 terms (4 years)\n• Participant of Stockton Folkdance Camp (USA) and Japan National Folk Dance Association Workshop\n• Taught Taiwanese dance in Japan 5 times (1999, 2003, 2009, 2012, 2016) and in Singapore (2014)\n• Led youth ambassador team to Burkina Faso under Taiwan's Ministry of Foreign Affairs (2012)\n• Taught Taiwanese dance at World Dance Day in Hong Kong (2018)\n• International visits (2000–2025, over 25 countries): Slovakia, Bulgaria, Netherlands, USA, Indonesia, Japan, Czech Republic, Poland, Turkey, Serbia, Macedonia, Guam, Armenia, Iran, Hungary, Qinghai, Tibet, Singapore, Greece, Albania, etc.\n• Invited foreign folk dance teachers to Taiwan (1998–2024): Poland, Hawaii, Slovakia, Japan, Macedonia, Hungary, Bulgaria, India, Netherlands, Romania, Indonesia, Colombia, USA, Malaysia, etc.\n• Academic presentations:\n  - 2007: “The Fourth Sector of Dance – Folk Dance” at Taiwan Dance Research Society\n  - 2013: Published *Appreciation of Folk Dance*\n  - 2018: “General Education Course – Appreciation of Folk Dance” at the 60th Anniversary International Conference of Folk Dance in Taiwan\n  - 2018: “Development of Folk Dance in Taiwan” co-presented with Fang-Chih Chen at National Taiwan University of Arts",
+
+  "kk": "• Started leading school folk dance groups in 1976\n• Joined Hong Kong Ying Sze Society in 1979\n• Since 1981, trained with many international folk dance teachers from Israel, Russia, Balkan regions, etc.\n• Joined Hong Kong Sy Wing Western Dance Group in 1982, winning awards in competitions\n• Studied ballet and Chinese dance from 1983–1987\n• Joined Buds Dance Association in 1984\n• Participated continuously in the Asia Folk Dance Camp since 1985\n• Performed Chinese dance dramas and taught European folk dance (1985–1987)\n• Served as chairman of Sy Wing Western Folk Dance Group in 1988\n• Obtained Advance ISTD certificate from the Royal Academy of Dance (UK) in 1989\n• Attended training camps in Japan, USA, Bulgaria (1992–1999)\n• Invited to teach European folk dance in Malaysia and Singapore (1993–1994)\n• Guest performer for Selangor St. Andrew Society (2003)\n• Founded Ying Sze Dance Club in Johor Bahru, Malaysia (2008)\n• Organized European folk dance workshops in Singapore since 2009\n• Acquired ISTD Associate Line Dance certificate in 2012\n• Taught at many schools and community groups in Singapore (2013–2015)\n• Taught over 300 children European folk dance in Johor Bahru (2014–2015)\n• Acquired ISTD Associate National Dance certificate in 2017\n• Obtained Executive MBA from the UK in 2021\n• Began teaching National Dance at an orphanage in Johor Bahru, Malaysia (2023)"
+}
+
 
   
   
