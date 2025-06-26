@@ -18,6 +18,8 @@ import {
   Slide,
   IconButton,
   useTheme,
+  Button,
+  Collapse,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
@@ -48,10 +50,10 @@ const schedule = [
 
 const speakers = [
   { name: "huang", topicKey: "schedule.3", time: "09:30–10:00", bioKey: "bio.huang", image: huangImg },
-  { name: "kk", topicKey: "schedule.5", time: "10:10–10:40", bioKey: "bio.kk", image: kkImg },
+  { name: "kk", topicKey: "schedule.5", time: "10:10–10:40", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
   { name: "su", topicKey: "schedule.6", time: "10:50–11:20", bioKey: "bio.su", image: suImg },
   { name: "tsang", topicKey: "schedule.7", time: "11:30–12:00", bioKey: "bio.tsang", image: tsangImg },
-  { name: "hsu", topicKey: "schedule.9", time: "13:10–13:30", bioKey: "bio.hsu", image: hsuImg },
+  { name: "hsu", topicKey: "schedule.9", time: "13:10–13:30", bioKey: "bio.hsu", moreKey: "more.hsu", image: hsuImg },
   { name: "iliana", topicKey: "schedule.10", time: "13:30–13:50", bioKey: "bio.iliana", image: ilianaImg }
 ];
 
@@ -64,8 +66,12 @@ export default function ForumPage() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [activeSpeaker, setActiveSpeaker] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    setShowMore(false);
+  };
 
   return (
     <Box sx={{ py: 8, px: 2, textAlign: "center" }}>
@@ -118,7 +124,12 @@ export default function ForumPage() {
         {speakers.map((s, idx) => (
           <Grid item xs={12} sm={6} md={4} key={idx} display="flex" justifyContent="center">
             <Card onClick={() => { setActiveSpeaker(s); setOpen(true); }} sx={{ cursor: "pointer", width: 300 }}>
-              <CardMedia component="img" image={s.image} alt={s.name} sx={{ height: 260, objectFit: "cover" }} />
+              <CardMedia
+                component="img"
+                image={s.image}
+                alt={s.name}
+                sx={{ height: 260, objectFit: "contain", objectPosition: "top" }}
+              />
               <CardContent>
                 <Typography variant="h6" fontWeight="bold" fontSize="1.2rem">
                   {t(`name.${s.name}`)}
@@ -152,13 +163,33 @@ export default function ForumPage() {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers>
-          <CardMedia component="img" image={activeSpeaker?.image} alt={activeSpeaker?.name} sx={{ mb: 2, borderRadius: 1 }} />
+          <CardMedia
+            component="img"
+            image={activeSpeaker?.image}
+            alt={activeSpeaker?.name}
+            sx={{ mb: 2, borderRadius: 1, objectFit: "contain", objectPosition: "top" }}
+          />
           <Typography variant="body2" color="text.secondary" gutterBottom sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
             {t(activeSpeaker?.topicKey)}（{activeSpeaker?.time}）
           </Typography>
           <Typography variant="body2" sx={{ mt: 2, whiteSpace: "pre-line", fontSize: "1.1rem" }}>
             {t(activeSpeaker?.bioKey)}
           </Typography>
+
+          {activeSpeaker?.moreKey && (
+            <>
+              <Box textAlign="center" mt={2}>
+                <Button variant="outlined" onClick={() => setShowMore(!showMore)}>
+                  {showMore ? t("button.hide") : t("button.more")}
+                </Button>
+              </Box>
+              <Collapse in={showMore}>
+                <Typography variant="body2" sx={{ mt: 2, whiteSpace: "pre-line", fontSize: "1rem" }}>
+                  {t(activeSpeaker.moreKey)}
+                </Typography>
+              </Collapse>
+            </>
+          )}
         </DialogContent>
       </Dialog>
 
