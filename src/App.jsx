@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme";
 import "./App.css";
-
+import ScrollToTop from "./components/ScrollToTop"; // ✅ 新增這行
 import About from "./components/About";
 import Objective from "./components/Objective";
 import Footer from "./components/Footer";
@@ -45,17 +45,19 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
+        <ScrollToTop /> {/* ✅ 每次路由變化都自動捲到頂 */}
         <AppBarNav />
-        <div style={{ marginTop: "80px" }}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/dinner" element={<DinnerPage />} />
-            <Route path="/forum" element={<ForumPage />} />
-            <Route path="/show" element={<ShowPage />} />
-            <Route path="/party" element={<PartyPage />} />
-          </Routes>
-        </div>
+          <div style={{ marginTop: "80px" }}>
+             <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/dinner" element={<DinnerPage />} />
+                <Route path="/forum" element={<ForumPage />} />
+                <Route path="/show" element={<ShowPage />} />
+                <Route path="/party" element={<PartyPage />} />
+            </Routes>
+          </div>
       </Router>
+
     </ThemeProvider>
   );
 }
