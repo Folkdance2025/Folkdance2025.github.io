@@ -80,6 +80,13 @@ export default function AppBarNav() {
           px: 1.5,
           py: 0.5,
           borderRadius: "6px",
+          textTransform: "uppercase",
+          transition: "all 0.2s ease-in-out",
+          "&:hover": {
+            backgroundColor: "rgba(255,255,255,0.7)",
+            color: "#000",
+            borderColor: "#fff",
+          },
         },
         "& button.Mui-disabled": {
           color: "#000",
@@ -92,13 +99,13 @@ export default function AppBarNav() {
         onClick={() => setLanguage("zh")}
         disabled={currentLang === "zh"}
       >
-        🇹🇼 中文
+        中文
       </Button>
       <Button
         onClick={() => setLanguage("en")}
         disabled={currentLang === "en"}
       >
-        🇺🇸 ENGLISH
+        ENGLISH
       </Button>
     </ButtonGroup>
   );
@@ -120,7 +127,6 @@ export default function AppBarNav() {
           justifyContent: "flex-start",
         }}
       >
-        {/* 桌面版 AppBar */}
         {!isMobile && (
           <AppBar
             position="fixed"
@@ -202,14 +208,12 @@ export default function AppBarNav() {
                   </>
                 )}
 
-                {/* 語言切換按鈕群組 */}
                 {LangButtons}
               </Stack>
             </Toolbar>
           </AppBar>
         )}
 
-        {/* 手機版 Drawer + 語言切換按鈕 */}
         {isMobile && (
           <>
             <IconButton
@@ -222,7 +226,6 @@ export default function AppBarNav() {
               <MenuIcon fontSize="large" />
             </IconButton>
 
-            {/* 手機右上語言切換 */}
             <Box sx={{ position: "absolute", top: 20, right: 20, zIndex: 3 }}>
               {LangButtons}
             </Box>
