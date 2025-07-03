@@ -32,6 +32,21 @@ export default function ShowPage() {
       >
         {t("show.title")}
       </Typography>
+      
+      <Typography
+        variant="body1"
+        fontSize="1.1rem"
+        sx={{
+          maxWidth: 960,
+          mx: "auto",
+          mt: 2,
+          whiteSpace: "pre-line",
+          textAlign: "justify",
+          lineHeight: 1.8,
+          letterSpacing: "0.02em",}}
+
+>         {t("show.description")}
+      </Typography>
 
       <Box sx={{ mt: 4 }}>
         <Typography variant="h6" fontSize="2rem" fontWeight="bold" sx={{ mb: 1 }}>
