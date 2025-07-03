@@ -37,24 +37,24 @@ import ilianaImg from "../assets/speakers/iliana.jpg";
 const schedule = [
   ["08:30 - 09:00", "schedule.1", "schedule.1_note"],
   ["09:00 - 09:20", "schedule.2", "schedule.2_note"],
-  ["09:30 - 10:00", "schedule.3", "schedule.3_note"],
-  ["10:00 - 10:10", "schedule.4", "schedule.4_note"],
-  ["10:10 - 10:40", "schedule.5", "schedule.5_note"],
+  ["09:20 - 09:50", "schedule.3", "schedule.3_note"],
+  ["10:00 - 10:30", "schedule.4", "schedule.4_note"],
+  ["10:40 - 10:50", "schedule.5", "schedule.5_note"],
   ["10:50 - 11:20", "schedule.6", "schedule.6_note"],
   ["11:30 - 12:00", "schedule.7", "schedule.7_note"],
   ["12:00 - 13:00", "schedule.8", "schedule.8_note"],
-  ["13:10 - 13:30", "schedule.9", "schedule.9_note"],
+  ["13:00 - 13:30", "schedule.9", "schedule.9_note"],
   ["13:30 - 13:50", "schedule.10", "schedule.10_note"],
   ["13:50 - 14:00", "schedule.11", "schedule.11_note"]
 ];
 
 const speakers = [
-  { name: "huang", topicKey: "schedule.3", time: "09:30–10:00", bioKey: "bio.huang", image: huangImg },
-  { name: "kk", topicKey: "schedule.5", time: "10:10–10:40", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
+  { name: "huang", topicKey: "schedule.3", time: "09:20–09:50", bioKey: "bio.huang", image: huangImg },
+  { name: "kk", topicKey: "schedule.4", time: "10:00–10:30", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
   { name: "su", topicKey: "schedule.6", time: "10:50–11:20", bioKey: "bio.su", image: suImg },
-  { name: "tsang", topicKey: "schedule.7", time: "11:30–12:00", bioKey: "bio.tsang", image: tsangImg },
-  { name: "hsu", topicKey: "schedule.9", time: "13:10–13:30", bioKey: "bio.hsu", moreKey: "more.hsu", image: hsuImg },
-  { name: "iliana", topicKey: "schedule.10", time: "13:30–13:50", bioKey: "bio.iliana", image: ilianaImg }
+  { name: "wu", topicKey: "schedule.7", time: "11:30–12:00", bioKey: "bio.tsang", image: tsangImg },
+  { name: "iliana", topicKey: "schedule.9", time: "13:00–13:30", bioKey: "bio.iliana", image: ilianaImg },
+  { name: "hsu", topicKey: "schedule.10", time: "13:30–13:50", bioKey: "bio.hsu", moreKey: "more.hsu", image: hsuImg }
 ];
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -76,8 +76,23 @@ export default function ForumPage() {
   return (
     <Box sx={{ py: 8, px: 2, textAlign: "center" }}>
       <Typography variant="h4" fontWeight="bold" fontSize="2.2rem" gutterBottom>
-        {t("scheduleTitle")}
+        {t("Title")}
       </Typography>
+
+      <Box sx={{ mt: 4, maxWidth: "1000px", mx: "auto" }}>
+        <Typography
+          variant="body1"
+          fontSize="1.2rem"
+          sx={{
+            whiteSpace: "pre-line",
+            textAlign: "justify",
+            lineHeight: 1.8,
+            letterSpacing: "0.03em"
+          }}
+        >
+          {t("description")}
+        </Typography>
+      </Box>
 
       <Box sx={{ mt: 4 }}>
         <Typography variant="h6" fontSize="2rem" fontWeight="bold" sx={{ mb: 1 }}>
@@ -95,21 +110,43 @@ export default function ForumPage() {
         </Typography>
       </Box>
 
-      <Paper sx={{ width: "100%", maxWidth: "1000px", mx: "auto", mt: 6, mb: 6, overflowX: "auto" }}>
+      {/* 表格標題 */}
+      <Typography
+        variant="h6"
+        fontSize="1.6rem"
+        fontWeight="bold"
+        sx={{ mt: 6, mb: 2 }}
+      >
+        {t("scheduleTitle")}
+      </Typography>
+
+      <Paper sx={{ width: "100%", maxWidth: "1000px", mx: "auto", mt: 0, mb: 6, overflowX: "auto" }}>
         <Table sx={{ minWidth: 800 }}>
           <TableHead>
             <TableRow>
-              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>{t("table.time")}</TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>{t("table.topic")}</TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>{t("table.note")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+                {t("table.time")}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+                {t("table.topic")}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+                {t("table.note")}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {schedule.map((row, index) => (
+            {schedule.map(([time, topicKey, noteKey], index) => (
               <TableRow key={index}>
-                {row.map((cell, i) => (
-                  <TableCell key={i} align="center" sx={{ fontSize: "1.15rem", py: 2 }}>{t(cell)}</TableCell>
-                ))}
+                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2, whiteSpace: "nowrap" }}>
+                  {time}
+                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2 }}>
+                  {t(topicKey)}
+                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2 }}>
+                  {t(noteKey)}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
