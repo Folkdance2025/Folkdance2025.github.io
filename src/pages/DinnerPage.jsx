@@ -17,6 +17,26 @@ export default function DinnerPage() {
         {t("dinner.title")}
       </Typography>
 
+     <Box
+      sx={{
+        maxWidth: "1000px",
+        mx: "auto",         // 區塊置中
+        my: 8,
+        px: 2,
+        textAlign: "left", // 文字靠左對齊
+      }}
+    >
+      <Typography
+        variant="body1"
+        fontSize={{ xs: "1.1rem", md: "1.25rem" }}
+        lineHeight={1.8}
+        letterSpacing="0.03em"
+        whiteSpace="pre-line"
+      >
+        {t("dinner.description")}
+      </Typography>
+    </Box>
+
       <Box sx={{ mt: 2 }}>
         <Typography
           variant="h6"
@@ -38,15 +58,7 @@ export default function DinnerPage() {
         </Typography>
       </Box>
 
-      <Box sx={{ mt: 6, fontSize: "1.2rem" }}>
-        <Typography
-          variant="body1"
-          fontSize="1.3rem"
-          sx={{ maxWidth: 800, mx: "auto", mb: 6 }}
-        >
-          {t("dinner.description")}
-        </Typography>
-      </Box>
+     
 
       <Box sx={{ mt: 6 }}>
         <BackHomeButton />
