@@ -27,12 +27,14 @@ import { useTranslation } from "react-i18next";
 import BackHomeButton from "../components/BackHomeButton";
 import React from "react";
 
-import huangImg from "../assets/speakers/huang.jpg";
+import logoZh from "../assets/logo_zh.png";
+import logoEn from "../assets/logo_en.png";
 import kkImg from "../assets/speakers/kk.jpg";
 import suImg from "../assets/speakers/su.jpg";
 import tsangImg from "../assets/speakers/tseng.jpeg";
 import hsuImg from "../assets/speakers/hsu.png";
 import ilianaImg from "../assets/speakers/iliana.jpg";
+import wuImg from "../assets/speakers/wu.jpg";
 
 const schedule = [
   ["08:30 - 09:00", "schedule.1", "schedule.1_note"],
@@ -48,25 +50,34 @@ const schedule = [
   ["13:50 - 14:00", "schedule.11", "schedule.11_note"]
 ];
 
-const speakers = [
-  { name: "huang", topicKey: "schedule.3", time: "09:20–09:50", bioKey: "bio.huang", image: huangImg },
-  { name: "kk", topicKey: "schedule.4", time: "10:00–10:30", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
-  { name: "su", topicKey: "schedule.6", time: "10:50–11:20", bioKey: "bio.su", image: suImg },
-  { name: "wu", topicKey: "schedule.7", time: "11:30–12:00", bioKey: "bio.tsang", image: tsangImg },
-  { name: "iliana", topicKey: "schedule.9", time: "13:00–13:30", bioKey: "bio.iliana", image: ilianaImg },
-  { name: "hsu", topicKey: "schedule.10", time: "13:30–13:50", bioKey: "bio.hsu", moreKey: "more.hsu", image: hsuImg }
-];
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function ForumPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [activeSpeaker, setActiveSpeaker] = useState(null);
   const [showMore, setShowMore] = useState(false);
+  const currentLang = i18n.language;
+
+  const getPlaceholderImage = () => (currentLang === "zh" ? logoZh : logoEn);
+
+  const speakers = [
+    {
+      name: "huang",
+      topicKey: "schedule.3",
+      time: "09:20–09:50",
+      /* bioKey: "bio.huang", */
+      image: getPlaceholderImage()
+    },
+    { name: "kk", topicKey: "schedule.4", time: "10:00–10:30", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
+    { name: "su", topicKey: "schedule.6", time: "10:50–11:20", bioKey: "bio.su", image: suImg },
+    { name: "wu", topicKey: "schedule.7", time: "11:30–12:00", bioKey: "bio.wu", image: wuImg },
+    { name: "iliana", topicKey: "schedule.9", time: "13:00–13:30", bioKey: "bio.iliana", image: ilianaImg },
+    { name: "hsu", topicKey: "schedule.10", time: "13:30–13:50", bioKey: "bio.hsu", moreKey: "more.hsu", image: hsuImg }
+  ];
 
   const handleClose = () => {
     setOpen(false);
@@ -83,12 +94,7 @@ export default function ForumPage() {
         <Typography
           variant="body1"
           fontSize="1.2rem"
-          sx={{
-            whiteSpace: "pre-line",
-            textAlign: "justify",
-            lineHeight: 1.8,
-            letterSpacing: "0.03em"
-          }}
+          sx={{ whiteSpace: "pre-line", textAlign: "justify", lineHeight: 1.8, letterSpacing: "0.03em" }}
         >
           {t("description")}
         </Typography>
@@ -99,24 +105,13 @@ export default function ForumPage() {
           {t("venue.title")}：
         </Typography>
         <Typography variant="body1" fontSize="1.5rem">
-          <a
-            href={t("venue.name")}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: '#1976d2', textDecoration: 'underline' }}
-          >
+          <a href={t("venue.name")} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline' }}>
             {t("venue.linkText")}
           </a>
         </Typography>
       </Box>
 
-      {/* 表格標題 */}
-      <Typography
-        variant="h6"
-        fontSize="1.6rem"
-        fontWeight="bold"
-        sx={{ mt: 6, mb: 2 }}
-      >
+      <Typography variant="h6" fontSize="1.6rem" fontWeight="bold" sx={{ mt: 6, mb: 2 }}>
         {t("scheduleTitle")}
       </Typography>
 
@@ -124,29 +119,17 @@ export default function ForumPage() {
         <Table sx={{ minWidth: 800 }}>
           <TableHead>
             <TableRow>
-              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-                {t("table.time")}
-              </TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-                {t("table.topic")}
-              </TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-                {t("table.note")}
-              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>{t("table.time")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>{t("table.topic")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.3rem", fontWeight: "bold" }}>{t("table.note")}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {schedule.map(([time, topicKey, noteKey], index) => (
               <TableRow key={index}>
-                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2, whiteSpace: "nowrap" }}>
-                  {time}
-                </TableCell>
-                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2 }}>
-                  {t(topicKey)}
-                </TableCell>
-                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2 }}>
-                  {t(noteKey)}
-                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2, whiteSpace: "nowrap" }}>{time}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2 }}>{t(topicKey)}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1.15rem", py: 2 }}>{t(noteKey)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -161,12 +144,7 @@ export default function ForumPage() {
         {speakers.map((s, idx) => (
           <Grid item xs={12} sm={6} md={4} key={idx} display="flex" justifyContent="center">
             <Card onClick={() => { setActiveSpeaker(s); setOpen(true); }} sx={{ cursor: "pointer", width: 300 }}>
-              <CardMedia
-                component="img"
-                image={s.image}
-                alt={s.name}
-                sx={{ height: 260, objectFit: "contain", objectPosition: "top" }}
-              />
+              <CardMedia component="img" image={s.image} alt={s.name} sx={{ height: 260, objectFit: "contain", objectPosition: "top" }} />
               <CardContent>
                 <Typography variant="h6" fontWeight="bold" fontSize="1.2rem">
                   {t(`name.${s.name}`)}
@@ -177,10 +155,11 @@ export default function ForumPage() {
                     fontWeight: "bold",
                     color: theme.palette.primary.main,
                     fontSize: "1rem",
-                    mt: 1
+                    mt: 1,
+                    whiteSpace: "pre-line" // 支援換行顯示時間
                   }}
                 >
-                  {t(s.topicKey)}（{s.time}）
+                  {`${t(s.topicKey)}\n${s.time}`}
                 </Typography>
               </CardContent>
             </Card>
@@ -191,21 +170,12 @@ export default function ForumPage() {
       <Dialog open={open} onClose={handleClose} TransitionComponent={Transition} fullWidth maxWidth="sm">
         <DialogTitle sx={{ fontSize: "1.5rem" }}>
           {t(`name.${activeSpeaker?.name}`)}
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
-            sx={{ position: "absolute", right: 8, top: 8, color: (theme) => theme.palette.grey[500] }}
-          >
+          <IconButton aria-label="close" onClick={handleClose} sx={{ position: "absolute", right: 8, top: 8, color: (theme) => theme.palette.grey[500] }}>
             <CloseIcon />
           </IconButton>
         </DialogTitle>
         <DialogContent dividers>
-          <CardMedia
-            component="img"
-            image={activeSpeaker?.image}
-            alt={activeSpeaker?.name}
-            sx={{ mb: 2, borderRadius: 1, objectFit: "contain", objectPosition: "top" }}
-          />
+          <CardMedia component="img" image={activeSpeaker?.image} alt={activeSpeaker?.name} sx={{ mb: 2, borderRadius: 1, objectFit: "contain", objectPosition: "top" }} />
           <Typography variant="body2" color="text.secondary" gutterBottom sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
             {t(activeSpeaker?.topicKey)}（{activeSpeaker?.time}）
           </Typography>
