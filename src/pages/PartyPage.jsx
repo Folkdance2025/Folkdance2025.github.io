@@ -17,6 +17,28 @@ export default function PartyPage() {
         {t("party.title")}
       </Typography>
 
+    {/* 活動內容說明 */}
+      <Box
+      sx={{
+        maxWidth: "1000px",
+        mx: "auto", // 區塊水平置中
+        my: 8,
+        px: 2,
+        textAlign: "left", // 文字本身靠左對齊
+      }}
+    >
+      {/* 內文段落 */}
+      <Typography
+        variant="body1"
+        fontSize={{ xs: "1.1rem", md: "1.25rem" }}
+        lineHeight={1.8}
+        letterSpacing="0.03em"
+        whiteSpace="pre-line"
+      >
+        {t("party.description")}
+      </Typography>
+    </Box>
+
       {/* 活動地點 */}
       <Box sx={{ mt: 2, mb: 4 }}>
         <Typography
@@ -37,15 +59,6 @@ export default function PartyPage() {
           </a>
         </Typography>
       </Box>
-
-      {/* 活動內容說明 */}
-      <Typography
-        variant="body1"
-        fontSize="1.3rem"
-        sx={{ maxWidth: 800, mx: "auto", mb: 6 }}
-      >
-        {t("party.description")}
-      </Typography>
 
       <BackHomeButton />
     </Box>
