@@ -67,28 +67,24 @@
   "iliana": "Iliana Bozhanova"
 },
 "schedule": {
-  "1": "Registration",
-  "1_note": "Hosted by the Organizer",
-  "2": "Opening Dance Performance and Welcome Remarks",
-  "2_note": "InSync Dance Society and Distinguished Guests",
-  "3": "Presentation Topic: To Be Announced",
-  "3_note": "Guest Speaker: To Be Confirmed",
-  "4": "Heritage and Continuation",
-  "4_note": "Kwok-Kei Ng",
-  "5": "Break",
-  "5_note": "Refreshments Provided",
-  "6": "Curriculum Design and Practice",
-  "6_note": "Yue-Miao Su",
-  "7": "The Functions of Dance Competitions",
-  "7_note": "Tsung-Chiang Wu",
-  "8": "Lunch",
-  "8_note": "Lunchboxes Provided",
-  "9": "Transmission of Bulgarian Folk Dance (Video)",
-  "9_note": "Iliana Bozhanova",
-  "10": "Sharing of International Folk Dance Experience",
-  "10_note": "Wen-Hung Hsu",
-  "11": "Forum Closing and Declaration",
-  "11_note": "All Participants"
+  "register": "Registration",
+  "register_note": "Hosted by Organizers",
+  "openingDance": "Opening Dance Performance & Speeches",
+  "openingDance_note": "Ying-Szu Folk Dance Club & Distinguished Guests",
+  "sharingExperience": "Sharing of International Folk Dance Experience",
+  "sharingExperience_note": "Wen-Hung Hsu",
+  "bulgariaHeritage": "Heritage of Bulgarian Folk Dance (Video Presentation)",
+  "bulgariaHeritage_note": "Iliana & Wen-Hung Hsu",
+  "inheritance": "Cultural Transmission",
+  "inheritance_note": "Kuo-Chi Wu",
+  "break": "Break",
+  "break_note": "Refreshments Provided",
+  "competitionFunction": "The Function of Dance Competitions",
+  "competitionFunction_note": "Tsung-Chiang Wu",
+  "courseDesign": "Curriculum Design and Implementation",
+  "courseDesign_note": "Yue-Miao Su",
+  "closing": "Forum Closing & Declaration",
+  "closing_note": "All Participants"
 },
   "bio": {
     "huang": "A graduate of the School of Pharmacy at Kaohsiung Medical College, Huang Wen-Hung has been actively engaged in the promotion and education of international folk dance since 1983. With a career spanning over four decades, he has been a driving force in Taiwan’s folk dance community, serving as faculty advisor to folk dance clubs at numerous institutions including Wenzao Ursuline College of Languages, National Chung Hsing University, National Taichung University of Education, Providence University, Tunghai University, National Tsing Hua University, and National Chiao Tung University.\n\nHuang has also held long-standing faculty roles at many of Taiwan’s premier dance camps, including the Taiwan Asian Folk Dance Camp, Pan-Asian Dance Camp, National Ilan University’s World Dance Camp, and the Sun Moon Lake Teachers’ Dance Workshop. His international contributions include conducting workshops and cultural exchanges in the United States, Japan, and Hawaiʻi. In 2005, he served as Deputy Leader and interpreter for Taiwan’s delegation to the 9th National Festival of Bulgarian Folklore.\n\nIn 1991, he founded the Carnation International Folk Dance Promotion Association, followed by the establishment of the Taichung International Folk Dance Promotion Association in 2001, where he served as founding president. In 2004, he launched the “Timeless Dance Ensemble – Huang Wen-Hung Dance Studio,” through which he has continued to innovate, teach, and promote international folk dance. He is widely regarded as a leading figure in the preservation and development of folk dance in Taiwan.",
@@ -122,7 +118,7 @@
     "venue": {
     "title": "📍Forum Venue",
     "name": "https://maps.app.goo.gl/3bSG5JTDR7NrYnKT6",
-    "linkText": "National Quemoy University International Conference Hall"
+    "linkText": "Lu Ching-An Auditorium, Room E101, College of Science and Engineering, National Quemoy University"
   },
   "venue_show": {
   "title": "📍Event Venue",
