@@ -62,42 +62,11 @@ export default function ForumPage() {
   const getPlaceholderImage = () => (currentLang === "zh" ? logoZh : logoEn);
 
   const speakers = [
-    {
-      name: "hsu",
-      topicKey: "schedule.sharingExperience",
-      time: "09:20–09:35",
-      bioKey: "bio.hsu",
-      image: hsuImg,
-    },
-    {
-      name: "iliana",
-      topicKey: "schedule.bulgariaHeritage",
-      time: "09:35–10:00",
-      bioKey: "bio.iliana",
-      image: ilianaImg,
-    },
-    {
-      name: "kk",
-      topicKey: "schedule.inheritance",
-      time: "10:00–10:25",
-      bioKey: "bio.kk",
-      moreKey: "more.kk",
-      image: kkImg,
-    },
-    {
-      name: "wu",
-      topicKey: "schedule.competitionFunction",
-      time: "10:45–11:10",
-      bioKey: "bio.wu",
-      image: wuImg,
-    },
-    {
-      name: "su",
-      topicKey: "schedule.courseDesign",
-      time: "11:15–11:40",
-      bioKey: "bio.su",
-      image: suImg,
-    },
+    { name: "hsu", topicKey: "schedule.sharingExperience", time: "09:20–09:35", bioKey: "bio.hsu", image: hsuImg },
+    { name: "iliana", topicKey: "schedule.bulgariaHeritage", time: "09:35–10:00", bioKey: "bio.iliana", image: ilianaImg },
+    { name: "kk", topicKey: "schedule.inheritance", time: "10:00–10:25", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
+    { name: "wu", topicKey: "schedule.competitionFunction", time: "10:45–11:10", bioKey: "bio.wu", image: wuImg },
+    { name: "su", topicKey: "schedule.courseDesign", time: "11:15–11:40", bioKey: "bio.su", image: suImg },
   ];
 
   const handleClose = () => {
@@ -112,11 +81,7 @@ export default function ForumPage() {
       </Typography>
 
       <Box sx={{ mt: 4, maxWidth: "1000px", mx: "auto" }}>
-        <Typography
-          variant="body1"
-          fontSize="1.2rem"
-          sx={{ whiteSpace: "pre-line", textAlign: "justify", lineHeight: 1.8, letterSpacing: "0.03em" }}
-        >
+        <Typography variant="body1" fontSize="1.2rem" sx={{ whiteSpace: "pre-line", textAlign: "justify", lineHeight: 1.8, letterSpacing: "0.03em" }}>
           {t("description")}
         </Typography>
       </Box>
@@ -165,34 +130,12 @@ export default function ForumPage() {
         {speakers.map((s, idx) => (
           <Grid item xs={12} sm={6} md={4} key={idx} display="flex" justifyContent="center">
             <Card onClick={() => { setActiveSpeaker(s); setOpen(true); }} sx={{ cursor: "pointer", width: 300 }}>
-              <CardMedia
-                component="img"
-                image={s.image || getPlaceholderImage()}
-                alt={s.name}
-                sx={{
-                  width: "100%",
-                  height: 280,
-                  objectFit: "cover",
-                  objectPosition: "top",
-                  bgcolor: "#fff",
-                  p: 1,
-                  borderRadius: 2
-                }}
-              />
+              <CardMedia component="img" image={s.image || getPlaceholderImage()} alt={s.name} sx={{ width: "100%", height: 280, objectFit: "contain", objectPosition: "center", bgcolor: "#f5f5f5", p: 2, borderRadius: 2 }} />
               <CardContent>
                 <Typography variant="h6" fontWeight="bold" fontSize="1.2rem">
                   {t(`name.${s.name}`)}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: "bold",
-                    color: theme.palette.primary.main,
-                    fontSize: "1rem",
-                    mt: 1,
-                    whiteSpace: "pre-line"
-                  }}
-                >
+                <Typography variant="body2" sx={{ fontWeight: "bold", color: theme.palette.primary.main, fontSize: "1rem", mt: 1, whiteSpace: "pre-line" }}>
                   {`${t(s.topicKey)}\n${s.time}`}
                 </Typography>
               </CardContent>
@@ -209,21 +152,7 @@ export default function ForumPage() {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers>
-          <CardMedia
-            component="img"
-            image={activeSpeaker?.image || getPlaceholderImage()}
-            alt={activeSpeaker?.name}
-            sx={{
-              width: "100%",
-              height: 280,
-              objectFit: "cover",
-              objectPosition: "top",
-              bgcolor: "#fff",
-              p: 1,
-              mb: 2,
-              borderRadius: 2
-            }}
-          />
+          <CardMedia component="img" image={activeSpeaker?.image || getPlaceholderImage()} alt={activeSpeaker?.name} sx={{ width: "100%", height: 400, objectFit: "contain", objectPosition: "center", bgcolor: "#f5f5f5", p: 2, mb: 2, borderRadius: 2 }} />
           <Typography variant="body2" color="text.secondary" gutterBottom sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
             {t(activeSpeaker?.topicKey)}（{activeSpeaker?.time}）
           </Typography>
