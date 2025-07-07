@@ -29,17 +29,11 @@ import React from "react";
 
 import logoZh from "../assets/logo_zh.png";
 import logoEn from "../assets/logo_en.png";
-import kkImg from "../assets/speakers/kk.jpg";       // 吳宗江
-import suImg from "../assets/speakers/su.jpg";       // 蘇月妙
-import wuImg from "../assets/speakers/wu.jpg";       // 吳國基
-import ilianaImg from "../assets/speakers/iliana.jpg"; // 伊利安娜
-import hsuImg from "../assets/speakers/hsu.png";     // 須文宏
-
-// ────────────────────────────────────────────────────────────
-// 1. 依照最新議程更新時間、主題與備註
-// 2. 取消原先下午場次，新增午餐時段
-// 3. 採用語系 key 命名，方便 i18n 維護
-// ────────────────────────────────────────────────────────────
+import kkImg from "../assets/speakers/kk.jpg";
+import suImg from "../assets/speakers/su.jpg";
+import wuImg from "../assets/speakers/wu.jpg";
+import ilianaImg from "../assets/speakers/iliana.jpg";
+import hsuImg from "../assets/speakers/hsu.png";
 
 const schedule = [
   ["08:30 - 09:00", "schedule.register", "schedule.register_note"],
@@ -67,26 +61,23 @@ export default function ForumPage() {
 
   const getPlaceholderImage = () => (currentLang === "zh" ? logoZh : logoEn);
 
-  // ────────────────────────────────────────────────────────────
-  // 依照最新議程同步更新講者資訊與時間
-  // ────────────────────────────────────────────────────────────
   const speakers = [
     {
-      name: "hsu",                // 須文宏
+      name: "hsu",
       topicKey: "schedule.sharingExperience",
       time: "09:20–09:35",
       bioKey: "bio.hsu",
       image: hsuImg,
     },
     {
-      name: "iliana",            // 伊利安娜
+      name: "iliana",
       topicKey: "schedule.bulgariaHeritage",
       time: "09:35–10:00",
       bioKey: "bio.iliana",
       image: ilianaImg,
     },
     {
-      name: "kk",              // 吳國基
+      name: "kk",
       topicKey: "schedule.inheritance",
       time: "10:00–10:25",
       bioKey: "bio.kk",
@@ -94,14 +85,14 @@ export default function ForumPage() {
       image: kkImg,
     },
     {
-      name: "wu",                  // 吳宗江
+      name: "wu",
       topicKey: "schedule.competitionFunction",
       time: "10:45–11:10",
       bioKey: "bio.wu",
       image: wuImg,
     },
     {
-      name: "su",                // 蘇月妙
+      name: "su",
       topicKey: "schedule.courseDesign",
       time: "11:15–11:40",
       bioKey: "bio.su",
@@ -174,7 +165,20 @@ export default function ForumPage() {
         {speakers.map((s, idx) => (
           <Grid item xs={12} sm={6} md={4} key={idx} display="flex" justifyContent="center">
             <Card onClick={() => { setActiveSpeaker(s); setOpen(true); }} sx={{ cursor: "pointer", width: 300 }}>
-              <CardMedia component="img" image={s.image} alt={s.name} sx={{ height: 260, objectFit: "contain", objectPosition: "top" }} />
+              <CardMedia
+                component="img"
+                image={s.image || getPlaceholderImage()}
+                alt={s.name}
+                sx={{
+                  width: "100%",
+                  height: 280,
+                  objectFit: "cover",
+                  objectPosition: "top",
+                  bgcolor: "#fff",
+                  p: 1,
+                  borderRadius: 2
+                }}
+              />
               <CardContent>
                 <Typography variant="h6" fontWeight="bold" fontSize="1.2rem">
                   {t(`name.${s.name}`)}
@@ -186,7 +190,7 @@ export default function ForumPage() {
                     color: theme.palette.primary.main,
                     fontSize: "1rem",
                     mt: 1,
-                    whiteSpace: "pre-line" // 支援換行顯示時間
+                    whiteSpace: "pre-line"
                   }}
                 >
                   {`${t(s.topicKey)}\n${s.time}`}
@@ -205,7 +209,21 @@ export default function ForumPage() {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers>
-          <CardMedia component="img" image={activeSpeaker?.image} alt={activeSpeaker?.name} sx={{ mb: 2, borderRadius: 1, objectFit: "contain", objectPosition: "top" }} />
+          <CardMedia
+            component="img"
+            image={activeSpeaker?.image || getPlaceholderImage()}
+            alt={activeSpeaker?.name}
+            sx={{
+              width: "100%",
+              height: 280,
+              objectFit: "cover",
+              objectPosition: "top",
+              bgcolor: "#fff",
+              p: 1,
+              mb: 2,
+              borderRadius: 2
+            }}
+          />
           <Typography variant="body2" color="text.secondary" gutterBottom sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
             {t(activeSpeaker?.topicKey)}（{activeSpeaker?.time}）
           </Typography>
