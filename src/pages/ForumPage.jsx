@@ -29,25 +29,28 @@ import React from "react";
 
 import logoZh from "../assets/logo_zh.png";
 import logoEn from "../assets/logo_en.png";
-import kkImg from "../assets/speakers/kk.jpg";
-import suImg from "../assets/speakers/su.jpg";
-import tsangImg from "../assets/speakers/tseng.jpeg";
-import hsuImg from "../assets/speakers/hsu.png";
-import ilianaImg from "../assets/speakers/iliana.jpg";
-import wuImg from "../assets/speakers/wu.jpg";
+import kkImg from "../assets/speakers/kk.jpg";       // 吳宗江
+import suImg from "../assets/speakers/su.jpg";       // 蘇月妙
+import wuImg from "../assets/speakers/wu.jpg";       // 吳國基
+import ilianaImg from "../assets/speakers/iliana.jpg"; // 伊利安娜
+import hsuImg from "../assets/speakers/hsu.png";     // 須文宏
+
+// ────────────────────────────────────────────────────────────
+// 1. 依照最新議程更新時間、主題與備註
+// 2. 取消原先下午場次，新增午餐時段
+// 3. 採用語系 key 命名，方便 i18n 維護
+// ────────────────────────────────────────────────────────────
 
 const schedule = [
-  ["08:30 - 09:00", "schedule.1", "schedule.1_note"],
-  ["09:00 - 09:20", "schedule.2", "schedule.2_note"],
-  ["09:20 - 09:50", "schedule.3", "schedule.3_note"],
-  ["10:00 - 10:30", "schedule.4", "schedule.4_note"],
-  ["10:40 - 10:50", "schedule.5", "schedule.5_note"],
-  ["10:50 - 11:20", "schedule.6", "schedule.6_note"],
-  ["11:30 - 12:00", "schedule.7", "schedule.7_note"],
-  ["12:00 - 13:00", "schedule.8", "schedule.8_note"],
-  ["13:00 - 13:30", "schedule.9", "schedule.9_note"],
-  ["13:30 - 13:50", "schedule.10", "schedule.10_note"],
-  ["13:50 - 14:00", "schedule.11", "schedule.11_note"]
+  ["08:30 - 09:00", "schedule.register", "schedule.register_note"],
+  ["09:00 - 09:20", "schedule.openingDance", "schedule.openingDance_note"],
+  ["09:20 - 09:35", "schedule.sharingExperience", "schedule.sharingExperience_note"],
+  ["09:35 - 10:00", "schedule.bulgariaHeritage", "schedule.bulgariaHeritage_note"],
+  ["10:00 - 10:25", "schedule.inheritance", "schedule.inheritance_note"],
+  ["10:25 - 10:40", "schedule.break", "schedule.break_note"],
+  ["10:45 - 11:10", "schedule.competitionFunction", "schedule.competitionFunction_note"],
+  ["11:15 - 11:40", "schedule.courseDesign", "schedule.courseDesign_note"],
+  ["11:45 - 12:00", "schedule.closing", "schedule.closing_note"],
 ];
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -64,19 +67,46 @@ export default function ForumPage() {
 
   const getPlaceholderImage = () => (currentLang === "zh" ? logoZh : logoEn);
 
+  // ────────────────────────────────────────────────────────────
+  // 依照最新議程同步更新講者資訊與時間
+  // ────────────────────────────────────────────────────────────
   const speakers = [
     {
-      name: "huang",
-      topicKey: "schedule.3",
-      time: "09:20–09:50",
-      /* bioKey: "bio.huang", */
-      image: getPlaceholderImage()
+      name: "hsu",                // 須文宏
+      topicKey: "schedule.sharingExperience",
+      time: "09:20–09:35",
+      bioKey: "bio.hsu",
+      image: hsuImg,
     },
-    { name: "kk", topicKey: "schedule.4", time: "10:00–10:30", bioKey: "bio.kk", moreKey: "more.kk", image: kkImg },
-    { name: "su", topicKey: "schedule.6", time: "10:50–11:20", bioKey: "bio.su", image: suImg },
-    { name: "wu", topicKey: "schedule.7", time: "11:30–12:00", bioKey: "bio.wu", image: wuImg },
-    { name: "iliana", topicKey: "schedule.9", time: "13:00–13:30", bioKey: "bio.iliana", image: ilianaImg },
-    { name: "hsu", topicKey: "schedule.10", time: "13:30–13:50", bioKey: "bio.hsu", moreKey: "more.hsu", image: hsuImg }
+    {
+      name: "iliana",            // 伊利安娜
+      topicKey: "schedule.bulgariaHeritage",
+      time: "09:35–10:00",
+      bioKey: "bio.iliana",
+      image: ilianaImg,
+    },
+    {
+      name: "kk",              // 吳國基
+      topicKey: "schedule.inheritance",
+      time: "10:00–10:25",
+      bioKey: "bio.kk",
+      moreKey: "more.kk",
+      image: kkImg,
+    },
+    {
+      name: "wu",                  // 吳宗江
+      topicKey: "schedule.competitionFunction",
+      time: "10:45–11:10",
+      bioKey: "bio.wu",
+      image: wuImg,
+    },
+    {
+      name: "su",                // 蘇月妙
+      topicKey: "schedule.courseDesign",
+      time: "11:15–11:40",
+      bioKey: "bio.su",
+      image: suImg,
+    },
   ];
 
   const handleClose = () => {
