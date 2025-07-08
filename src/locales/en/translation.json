@@ -49,6 +49,11 @@
     
     ]
   },
+  "promo": {
+  "title": "Festival Promo Videos",
+  "progress": "Video {{current}} of {{total}}"
+  },
+  
   "Title": "International Forum on World Folk Dance",
   "description": "Unlike previous events, this year’s program includes an international forum themed 'Local Transmission of World Folk Dance'. Given the significance of world folk dance in broadening global perspectives and promoting cultural integration, raising awareness and embedding it in daily life is essential. However, the current environment in Taiwan poses challenges for its promotion and inheritance. Therefore, this forum, hosted in Kinmen, brings together insights and experiences from global Chinese communities and international participants, aiming to provide valuable references for improving Taiwan’s cultural environment and transmission strategies.",
   "scheduleTitle": "Agenda of the 2025 International Forum on World Folk Dance",
@@ -94,25 +99,28 @@
     "hsu": "Professor Hsu Wen-Hung has long been dedicated to the promotion of folk dance and cross-cultural exchange. He once served as the president of the Folk Dance Club at National Central University, editor of Oro Newsletter, and general coordinator for multiple sessions of the Pan-Asia Folk Dance Camp. Balancing roles as educator, administrator, and international liaison, he served as Secretary-General of the International Folk Dance Association of the Republic of China (Taiwan) for 12 years, followed by 3 years as its President. He also held two terms as President of the association’s Yilan County branch.\n\nProfessor Hsu's international footprint spans the United States, Japan, Singapore, Africa, and Europe. He has represented Taiwan at numerous international dance camps and cultural festivals, conducting lectures and workshops. Notably, he has traveled to Japan five times and to Singapore twice to promote Taiwanese folk dance. Since 2007, he has actively engaged in academic research and publication, authoring several papers and publishing the book *Appreciating Folk Dance*.\n\nIn addition to his frequent participation in international exchange programs abroad, he has consistently invited folk dance instructors from Europe, Asia, and the Americas to Taiwan for cultural exchange and workshops, thereby enriching Taiwan’s folk dance scene with a broader global perspective. He currently serves as Executive Director of the International Folk Dance Association of the Republic of China (Taiwan), Director of the Yilan County branch, advisor to the Haiyun Folk Dance Club at National Ilan University, and Folk Dance Consultant for the Yilan International Children's Folklore and Folkgame Festival.",
     "iliana": "Born in 1961 into a musical family in Galabovo, southern Thrace, Iliana Bozhanova is a renowned Bulgarian folk dance educator and choreographer. She graduated from the National School for Art Instructors and later earned both her Bachelor's and Master's degrees from Plovdiv’s Academy of Music, Dance, and Fine Arts, specializing in Bulgarian traditional music and dance.\n\nAt the age of 16, she joined the celebrated Rûchenitsa Folk Dance Ensemble in Plovdiv, performing extensively across Bulgaria and abroad in countries such as Greece, Serbia, Poland, Belgium, Portugal, France, Italy, the Netherlands, and Russia. In 1981, she began choreographing for two youth ensembles in Yoakim Gruevo village and at the Rosa Dimitrova Orphanage. In October 2004, she became the artistic director of the Voivodintsi ensemble, which features over 130 dancers ranging in age from 4 to 76.\n\nOver the years, Iliana has collaborated with numerous dance organizations and cultural institutions across the world, including in the Netherlands, Norway, Japan, Taiwan, Hong Kong, Switzerland, Germany, Canada, and the United States. She has also served as a guest lecturer at various universities.\n\nCurrently, she is the dance director of the International Folk Dance Camp at the Plovdiv Academy of Music, Dance, and Fine Arts, while continuing to work professionally in architectural drafting. Her teaching is deeply rooted in authenticity, cultural context, and pedagogical clarity, making her one of the most respected ambassadors of Bulgarian folk dance worldwide.\n\nFor more information, please visit: www.ilianabozhanova.com"
   },
-    "show": {
-    "title": "International Folk Dance Showcase",
-    "description": "A highlight of each edition is the 'World Folk Dance Showcase', which not only demonstrates the achievements of each group’s regular practices, but also facilitates multi-layered cultural exchange. Mutual understanding and support have become key outcomes of this engagement. This year’s showcase will be held at the Kinmen Cultural Affairs Bureau Auditorium. Participating Chinese folk dance troupes are expected from Taiwan, Kinmen, Hong Kong, Singapore, Malaysia, Indonesia, and Mainland China.",
-    "group": "Group Name",
-    "region": "Region",
-    "note": " Notes",
-    "remark": "*Groups may be subject to change.",
-    "groups": [
-      { "name": "Taichung Dance Heart Folk Dance Class", "region": "Taichung", "note": "Instructor Ou Guangqing" },
-      { "name": "Kaohsiung Happy Dancers", "region": "Kaohsiung", "note": "Instructor Lu Yuhong" },
-      { "name": "Kaohsiung Bagpipe Folk Dance Troupe", "region": "Kaohsiung", "note": "Instructor Lin Qiuping" },
-      { "name": "Kinmen Tangfeng Dance Troupe", "region": "Kinmen", "note": "Instructor Qiu Yitang" },
-      { "name": "Hong Kong Talents Workshop", "region": "Hong Kong", "note": "Instructor Li Guanghua" },
-      { "name": "Hong Kong Arts & Culture Workshop", "region": "Hong Kong", "note": "Instructor Zhou Quanhui" },
-      { "name": "Hong Kong Rising Western Folk Dance Troupe", "region": "Hong Kong", "note": "Instructor Zeng Jinquan" },
-      { "name": "Malaysia InSync Dance Society", "region": "Malaysia", "note": "Instructor Wu Guoji" },
-      { "name": "Putian College Folk Dance Club", "region": "Putian", "note": "Instructor Zheng Ruoyi" }
-    ]
-  },
+  "show": {
+  "title": "International Folk Dance Showcase",
+  "description": "A highlight of each edition is the 'World Folk Dance Showcase', which not only demonstrates the achievements of each group’s regular practices, but also facilitates multi-layered cultural exchange. Mutual understanding and support have become key outcomes of this engagement. This year’s showcase will be held at the Kinmen Cultural Affairs Bureau Auditorium. Participating Chinese folk dance troupes are expected from Taiwan, Kinmen, Hong Kong, Singapore, Malaysia, Indonesia, and Mainland China.",
+  "group": "Group Name",
+  "region": "Region",
+  "dance": "Dance",
+  "choreographer": "Choreographer",
+  "remark": "*Groups may be subject to change.",
+  "groups": [
+    { "name": "Dance Heart Folk Dance Class", "region": "Taichung", "dance": "Hungary", "choreographer": "Instructor Ou Guangqing" },
+    { "name": "Happy Dancers International Folk Dance Association", "region": "Kaohsiung", "dance": "Bulgaria", "choreographer": "Instructor Lu Yuhong" },
+    { "name": "Bagpipe Folk Dance Troupe", "region": "Kaohsiung", "dance": "Suite", "choreographer": "Instructor Lin Qiuping" },
+    { "name": "Talents Workshop", "region": "Hong Kong", "dance": "Israel", "choreographer": "Instructor Li Guanghua" },
+    { "name": "Arts & Culture Workshop", "region": "Hong Kong", "dance": "", "choreographer": "Instructor Zhou Quanhui" },
+    { "name": "Rising Western Folk Dance Troupe", "region": "Hong Kong", "dance": "Scotland", "choreographer": "Instructor Zeng Jinquan" },
+    { "name": "Joyful Volunteer Dance Troupe", "region": "Hong Kong", "dance": "China", "choreographer": "Instructor Chen Deyu" },
+    { "name": "InSync Dance Society", "region": "Malaysia", "dance": "Malaysia", "choreographer": "Instructor Wu Guoji" },
+    { "name": "Putian College Folk Dance Club", "region": "Putian", "dance": "—", "choreographer": "Instructor Zheng Ruoyi" },
+    { "name": "Tangfeng Dance Troupe", "region": "Kinmen", "dance": "Kinmen Local", "choreographer": "Instructor Qiu Yitang" },
+    { "name": "Kinmen Haotian Folk Arts Formation Association", "region": "Kinmen", "dance": "Generals' March", "choreographer": "Instructor Cai Yipang" }
+  ]
+},
   
     "venue": {
     "title": "📍Forum Venue",
