@@ -13,6 +13,7 @@ import ForumPage from "./pages/ForumPage";
 import ShowPage from "./pages/ShowPage";
 import PartyPage from "./pages/PartyPage";
 import AppBarNav from "./components/AppBarNav";
+import PromoVideos from "./components/PromoVideos"; 
 
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -24,6 +25,7 @@ function HomePage() {
       <div style={{ height: "60px" }} />
       <About />
       <Objective />
+      <PromoVideos />
       <Footer />
     </>
   );
