@@ -32,7 +32,7 @@ export default function ShowPage() {
       >
         {t("show.title")}
       </Typography>
-      
+
       <Typography
         variant="body1"
         fontSize="1.1rem"
@@ -43,9 +43,10 @@ export default function ShowPage() {
           whiteSpace: "pre-line",
           textAlign: "justify",
           lineHeight: 1.8,
-          letterSpacing: "0.02em",}}
-
->         {t("show.description")}
+          letterSpacing: "0.02em",
+        }}
+      >
+        {t("show.description")}
       </Typography>
 
       <Box sx={{ mt: 4 }}>
@@ -66,28 +67,24 @@ export default function ShowPage() {
 
       <TableContainer
         component={Paper}
-        sx={{ maxWidth: 960, mx: "auto", mt: 4, overflowX: "auto" }}
+        sx={{ maxWidth: 1024, mx: "auto", mt: 4, overflowX: "auto" }}
       >
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell align="center" sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-                {t("show.group")}
-              </TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-                {t("show.region")}
-              </TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-                {t("show.note")}
-              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.group")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.region")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.dance")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.choreographer")}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {groups.map((item, idx) => (
               <TableRow key={idx}>
-                <TableCell align="center" sx={{ fontSize: "1.1rem" }}>{item.name}</TableCell>
-                <TableCell align="center" sx={{ fontSize: "1.1rem" }}>{item.region}</TableCell>
-                <TableCell align="center" sx={{ fontSize: "1.1rem" }}>{item.note}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.name}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.region}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.dance}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.choreographer}</TableCell>
               </TableRow>
             ))}
           </TableBody>
