@@ -112,7 +112,7 @@
     { "name": "Happy Dancers International Folk Dance Association", "region": "Kaohsiung", "dance": "Bulgaria", "choreographer": "Instructor Lu Yuhong" },
     { "name": "Bagpipe Folk Dance Troupe", "region": "Kaohsiung", "dance": "Suite", "choreographer": "Instructor Lin Qiuping" },
     { "name": "Talents Workshop", "region": "Hong Kong", "dance": "Israel", "choreographer": "Instructor Li Guanghua" },
-    { "name": "Arts & Culture Workshop", "region": "Hong Kong", "dance": "", "choreographer": "Instructor Zhou Quanhui" },
+    { "name": "Arts & Culture Workshop", "region": "Hong Kong", "dance": "—", "choreographer": "Instructor Zhou Quanhui" },
     { "name": "Rising Western Folk Dance Troupe", "region": "Hong Kong", "dance": "Scotland", "choreographer": "Instructor Zeng Jinquan" },
     { "name": "Joyful Volunteer Dance Troupe", "region": "Hong Kong", "dance": "China", "choreographer": "Instructor Chen Deyu" },
     { "name": "InSync Dance Society", "region": "Malaysia", "dance": "Malaysia", "choreographer": "Instructor Wu Guoji" },
