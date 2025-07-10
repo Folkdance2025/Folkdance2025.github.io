@@ -25,7 +25,6 @@ function HomePage() {
       <div style={{ height: "60px" }} />
       <About />
       <Objective />
-      <PromoVideos />
       <Footer />
     </>
   );
