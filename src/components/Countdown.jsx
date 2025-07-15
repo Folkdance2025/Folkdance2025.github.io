@@ -129,6 +129,22 @@ export default function Countdown() {
         {renderBlock(t("countdown.minutes"), time.minutes, "minutes")}
         {renderBlock(t("countdown.seconds"), time.seconds, "seconds")}
       </Grid>
+
+      {/* 🎥 加入 MP4 影片區塊 */}
+      <Box sx={{ mt: 4, display: "flex", justifyContent: "center" }}>
+        <video
+          src="/Logo_dance.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            maxWidth: "90%",
+            width: "800px",
+            borderRadius: "12px",
+          }}
+        />
+      </Box>
     </Box>
   );
 }
