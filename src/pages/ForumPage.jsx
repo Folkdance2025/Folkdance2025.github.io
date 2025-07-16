@@ -1,4 +1,4 @@
-// src/pages/ForumPage.jsx
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -22,10 +22,8 @@ import {
   Collapse,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import BackHomeButton from "../components/BackHomeButton";
-import React from "react";
 
 import logoZh from "../assets/logo_zh.png";
 import logoEn from "../assets/logo_en.png";
@@ -34,6 +32,7 @@ import suImg from "../assets/speakers/su.jpg";
 import wuImg from "../assets/speakers/wu.jpg";
 import ilianaImg from "../assets/speakers/iliana.jpg";
 import hsuImg from "../assets/speakers/hsu.png";
+import forumPoster from "../assets/forum.png"; // ✅ 海報圖
 
 const schedule = [
   ["08:30 - 09:00", "schedule.register", "schedule.register_note"],
@@ -55,6 +54,7 @@ export default function ForumPage() {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [posterOpen, setPosterOpen] = useState(false);
   const [activeSpeaker, setActiveSpeaker] = useState(null);
   const [showMore, setShowMore] = useState(false);
   const currentLang = i18n.language;
@@ -161,10 +161,64 @@ export default function ForumPage() {
         ))}
       </Grid>
 
+      {/* ✅ 加入論壇海報 */}
+      <Box
+        sx={{
+          maxWidth: "1000px",
+          mx: "auto",
+          mt: 8,
+          cursor: "pointer",
+        }}
+        onClick={() => setPosterOpen(true)}
+      >
+        <img
+          src={forumPoster}
+          alt="Forum Poster"
+          style={{
+            width: "100%",
+            borderRadius: "12px",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+          }}
+        />
+      </Box>
+
+      {/* ✅ 彈出 Dialog 顯示全螢幕海報 */}
+      <Dialog open={posterOpen} onClose={() => setPosterOpen(false)} fullScreen>
+        <IconButton
+          onClick={() => setPosterOpen(false)}
+          sx={{ position: "absolute", top: 16, right: 16, zIndex: 10, color: "#fff" }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <DialogContent
+          sx={{
+            p: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src={forumPoster}
+            alt="Forum Poster Fullscreen"
+            sx={{
+              width: "auto",
+              maxWidth: "100%",
+              maxHeight: "90vh",
+              objectFit: "contain",
+              borderRadius: "8px",
+            }}
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* Dialog: 講者介紹 */}
       <Dialog open={open} onClose={handleClose} TransitionComponent={Transition} fullWidth maxWidth="sm">
         <DialogTitle sx={{ fontSize: "1.5rem" }}>
           {t(`name.${activeSpeaker?.name}`)}
-          <IconButton aria-label="close" onClick={handleClose} sx={{ position: "absolute", right: 8, top: 8, color: (theme) => theme.palette.grey[500] }}>
+          <IconButton aria-label="close" onClick={handleClose} sx={{ position: "absolute", right: 8, top: 8, color: theme.palette.grey[500] }}>
             <CloseIcon />
           </IconButton>
         </DialogTitle>
@@ -190,7 +244,6 @@ export default function ForumPage() {
           <Typography variant="body2" sx={{ mt: 2, whiteSpace: "pre-line", fontSize: "1.1rem" }}>
             {t(activeSpeaker?.bioKey)}
           </Typography>
-
           {activeSpeaker?.moreKey && (
             <>
               <Box textAlign="center" mt={2}>
