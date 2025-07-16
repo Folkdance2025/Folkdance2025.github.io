@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { Box, Typography, Grid, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
+import videoZH from "../assets/logo_zh.MP4";
+import videoEN from "../assets/logo_en.MP4";
+
 export default function Countdown() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [time, setTime] = useState({
     days: "00",
@@ -97,6 +100,8 @@ export default function Countdown() {
     </Grid>
   );
 
+  const videoSrc = i18n.language === "en" ? videoEN : videoZH;
+
   return (
     <Box
       sx={{
@@ -130,10 +135,9 @@ export default function Countdown() {
         {renderBlock(t("countdown.seconds"), time.seconds, "seconds")}
       </Grid>
 
-      {/* 🎥 加入 MP4 影片區塊 */}
       <Box sx={{ mt: 4, display: "flex", justifyContent: "center" }}>
         <video
-          src="/Logo_dance.mp4"
+          src={videoSrc}
           autoPlay
           loop
           muted

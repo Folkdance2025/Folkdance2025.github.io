@@ -1,10 +1,19 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Box,
+  Typography,
+  Dialog,
+  DialogContent,
+  IconButton,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import BackHomeButton from "../components/BackHomeButton";
+import dinnerImage from "../assets/dinner.jpg";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function DinnerPage() {
   const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
 
   return (
     <Box sx={{ py: 8, px: 2, textAlign: "center" }}>
@@ -17,27 +26,28 @@ export default function DinnerPage() {
         {t("dinner.title")}
       </Typography>
 
-     <Box
-      sx={{
-        maxWidth: "1000px",
-        mx: "auto",         // 區塊置中
-        my: 8,
-        px: 2,
-        textAlign: "left", // 文字靠左對齊
-      }}
-    >
-      <Typography
-        variant="body1"
-        fontSize={{ xs: "1.1rem", md: "1.25rem" }}
-        lineHeight={1.8}
-        letterSpacing="0.03em"
-        whiteSpace="pre-line"
+      <Box
+        sx={{
+          maxWidth: "1000px",
+          mx: "auto",
+          my: 8,
+          px: 2,
+          textAlign: "left",
+        }}
       >
-        {t("dinner.description")}
-      </Typography>
-    </Box>
+        <Typography
+          variant="body1"
+          fontSize={{ xs: "1.1rem", md: "1.25rem" }}
+          lineHeight={1.8}
+          letterSpacing="0.03em"
+          whiteSpace="pre-line"
+        >
+          {t("dinner.description")}
+        </Typography>
+      </Box>
 
-      <Box sx={{ mt: 2 }}>
+      {/* 活動地點 */}
+      <Box sx={{ mt: 2, mb: 4 }}>
         <Typography
           variant="h6"
           fontSize="1.6rem"
@@ -58,7 +68,49 @@ export default function DinnerPage() {
         </Typography>
       </Box>
 
-     
+      {/* 圖片展示 */}
+      <Box
+        sx={{
+          maxWidth: "1000px",
+          mx: "auto",
+          mt: 4,
+          cursor: "pointer",
+        }}
+        onClick={() => setOpen(true)}
+      >
+        <img
+          src={dinnerImage}
+          alt="Dinner Event"
+          style={{
+            width: "100%",
+            borderRadius: "12px",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+          }}
+        />
+      </Box>
+
+      {/* 彈窗放大圖片 */}
+      <Dialog open={open} onClose={() => setOpen(false)} maxWidth="xl">
+        <IconButton
+          onClick={() => setOpen(false)}
+          sx={{ position: "absolute", top: 8, right: 8, zIndex: 10 }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <DialogContent sx={{ p: 0 }}>
+          <Box
+            component="img"
+            src={dinnerImage}
+            alt="Dinner Fullscreen"
+            sx={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              maxHeight: "90vh",
+            }}
+          />
+        </DialogContent>
+      </Dialog>
 
       <Box sx={{ mt: 6 }}>
         <BackHomeButton />
