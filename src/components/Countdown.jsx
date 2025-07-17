@@ -1,12 +1,23 @@
-import { useEffect, useState } from "react";
-import { Box, Typography, Grid, Paper } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
+import {
+  Box,
+  Typography,
+  Grid,
+  Paper,
+  IconButton,
+  useTheme,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 
 import videoZH from "../assets/logo_zh.MP4";
 import videoEN from "../assets/logo_en.MP4";
 
 export default function Countdown() {
   const { t, i18n } = useTranslation();
+  const theme = useTheme();
+  const videoRef = useRef(null);
 
   const [time, setTime] = useState({
     days: "00",
@@ -21,6 +32,8 @@ export default function Countdown() {
     minutes: false,
     seconds: false,
   });
+
+  const [muted, setMuted] = useState(true);
 
   const padZero = (value) => String(value).padStart(2, "0");
 
@@ -56,6 +69,14 @@ export default function Countdown() {
 
     return () => clearInterval(timer);
   }, [time]);
+
+  const handleToggleMute = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !video.muted;
+      setMuted(video.muted);
+    }
+  };
 
   const renderBlock = (label, value, flipKey) => (
     <Grid item xs={12} sm={6} md={3} key={label}>
@@ -135,19 +156,43 @@ export default function Countdown() {
         {renderBlock(t("countdown.seconds"), time.seconds, "seconds")}
       </Grid>
 
-      <Box sx={{ mt: 4, display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          mt: 4,
+          position: "relative",
+          display: "inline-block",
+          maxWidth: "90%",
+        }}
+      >
         <video
+          ref={videoRef}
           src={videoSrc}
           autoPlay
           loop
-          muted
+          muted={muted}
           playsInline
           style={{
-            maxWidth: "90%",
-            width: "800px",
+            width: "100%",
+            maxWidth: "800px",
             borderRadius: "12px",
           }}
         />
+
+        <IconButton
+          onClick={handleToggleMute}
+          sx={{
+            position: "absolute",
+            top: 8,
+            right: 8,
+            bgcolor: "rgba(0,0,0,0.5)",
+            color: "#fff",
+            "&:hover": {
+              bgcolor: "rgba(0,0,0,0.7)",
+            },
+          }}
+        >
+          {muted ? <VolumeOffIcon /> : <VolumeUpIcon />}
+        </IconButton>
       </Box>
     </Box>
   );
