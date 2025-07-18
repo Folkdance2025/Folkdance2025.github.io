@@ -1,3 +1,4 @@
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -24,6 +25,7 @@ function HomePage() {
       <div style={{ height: "60px" }} />
       <About />
       <Objective />
+      <PromoVideos />
       <Footer />
     </>
   );
