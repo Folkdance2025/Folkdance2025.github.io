@@ -32,7 +32,8 @@ import suImg from "../assets/speakers/su.jpg";
 import wuImg from "../assets/speakers/wu.jpg";
 import ilianaImg from "../assets/speakers/iliana.jpg";
 import hsuImg from "../assets/speakers/hsu.png";
-import forumPoster from "../assets/forum.png"; // ✅ 海報圖
+import forumPosterZh from "../assets/forum_zh.png";
+import forumPosterEn from "../assets/forum_en.png";
 
 const schedule = [
   ["08:30 - 09:00", "schedule.register", "schedule.register_note"],
@@ -57,7 +58,9 @@ export default function ForumPage() {
   const [posterOpen, setPosterOpen] = useState(false);
   const [activeSpeaker, setActiveSpeaker] = useState(null);
   const [showMore, setShowMore] = useState(false);
+
   const currentLang = i18n.language;
+  const forumPoster = currentLang === "en" ? forumPosterEn : forumPosterZh;
 
   const getPlaceholderImage = () => (currentLang === "zh" ? logoZh : logoEn);
 
@@ -138,15 +141,7 @@ export default function ForumPage() {
                 component="img"
                 image={s.image || getPlaceholderImage()}
                 alt={s.name}
-                sx={{
-                  width: "100%",
-                  height: 280,
-                  objectFit: "contain",
-                  objectPosition: "center",
-                  bgcolor: "transparent",
-                  p: 2,
-                  borderRadius: 2
-                }}
+                sx={{ width: "100%", height: 280, objectFit: "contain", objectPosition: "center", bgcolor: "transparent", p: 2, borderRadius: 2 }}
               />
               <CardContent>
                 <Typography variant="h6" fontWeight="bold" fontSize="1.2rem">
@@ -161,60 +156,19 @@ export default function ForumPage() {
         ))}
       </Grid>
 
-      {/* ✅ 加入論壇海報 */}
-      <Box
-        sx={{
-          maxWidth: "1000px",
-          mx: "auto",
-          mt: 8,
-          cursor: "pointer",
-        }}
-        onClick={() => setPosterOpen(true)}
-      >
-        <img
-          src={forumPoster}
-          alt="Forum Poster"
-          style={{
-            width: "100%",
-            borderRadius: "12px",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
-          }}
-        />
+      <Box sx={{ maxWidth: "1000px", mx: "auto", mt: 8, cursor: "pointer" }} onClick={() => setPosterOpen(true)}>
+        <img src={forumPoster} alt="Forum Poster" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 4px 20px rgba(0,0,0,0.2)" }} />
       </Box>
 
-      {/* ✅ 彈出 Dialog 顯示全螢幕海報 */}
       <Dialog open={posterOpen} onClose={() => setPosterOpen(false)} fullScreen>
-        <IconButton
-          onClick={() => setPosterOpen(false)}
-          sx={{ position: "absolute", top: 16, right: 16, zIndex: 10, color: "#fff" }}
-        >
+        <IconButton onClick={() => setPosterOpen(false)} sx={{ position: "absolute", top: 16, right: 16, zIndex: 10, color: "#fff" }}>
           <CloseIcon />
         </IconButton>
-        <DialogContent
-          sx={{
-            p: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            component="img"
-            src={forumPoster}
-            alt="Forum Poster Fullscreen"
-            sx={{
-              width: "auto",
-              maxWidth: "100%",
-              maxHeight: "90vh",
-              objectFit: "contain",
-              borderRadius: "8px",
-            }}
-          />
+        <DialogContent sx={{ p: 0, backgroundColor: "rgba(0, 0, 0, 0.9)", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <Box component="img" src={forumPoster} alt="Forum Poster Fullscreen" sx={{ width: "auto", maxWidth: "100%", maxHeight: "90vh", objectFit: "contain", borderRadius: "8px" }} />
         </DialogContent>
       </Dialog>
 
-      {/* Dialog: 講者介紹 */}
       <Dialog open={open} onClose={handleClose} TransitionComponent={Transition} fullWidth maxWidth="sm">
         <DialogTitle sx={{ fontSize: "1.5rem" }}>
           {t(`name.${activeSpeaker?.name}`)}
@@ -223,21 +177,7 @@ export default function ForumPage() {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers sx={{ bgcolor: theme.palette.background.default }}>
-          <CardMedia
-            component="img"
-            image={activeSpeaker?.image || getPlaceholderImage()}
-            alt={activeSpeaker?.name}
-            sx={{
-              width: "100%",
-              height: 560,
-              objectFit: "contain",
-              objectPosition: "center",
-              bgcolor: "transparent",
-              p: 2,
-              mb: 2,
-              borderRadius: 2
-            }}
-          />
+          <CardMedia component="img" image={activeSpeaker?.image || getPlaceholderImage()} alt={activeSpeaker?.name} sx={{ width: "100%", height: 560, objectFit: "contain", objectPosition: "center", bgcolor: "transparent", p: 2, mb: 2, borderRadius: 2 }} />
           <Typography variant="body2" color="text.secondary" gutterBottom sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
             {t(activeSpeaker?.topicKey)}（{activeSpeaker?.time}）
           </Typography>
