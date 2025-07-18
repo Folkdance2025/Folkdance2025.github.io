@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
+    <title>404 Not Found</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
     <script>
-      const redirectPath = location.pathname + location.search;
-      sessionStorage.setItem('redirect-path', redirectPath);
-      location.replace('/');
+      // 將目前的路徑儲存起來，重整後讓 ReactRouter 判斷
+      sessionStorage.setItem("redirect-path", window.location.pathname);
     </script>
   </head>
   <body>
