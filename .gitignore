@@ -23,3 +23,5 @@ yarn-error.log*
 
 # Optional cache files
 .cache/
+src/assets/*.mp4
+src/assets/*.wmv
