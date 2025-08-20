@@ -64,17 +64,17 @@ export default function KinmenLiquorIntro() {
               variant="outlined"
               sx={{
                 mt: 3,
-                fontSize: "1.125rem", // ✅ 字體加大 (18px)
+                fontSize: "1.125rem", // 18px
                 fontWeight: 600,
-                px: 2,                // ✅ 適度左右 padding
-                minWidth: "auto",     // ✅ 按鈕寬度依文字
-                justifyContent: "flex-start"
+                px: 2,
+                minWidth: "auto",
+                justifyContent: "flex-start",
               }}
             >
               {t("kkl.link")}
             </Button>
 
-            {/* 影片 */}
+            {/* 影片（自動播放、靜音、循環、行動裝置內嵌） */}
             <Box
               sx={{
                 mt: 4,
@@ -91,6 +91,7 @@ export default function KinmenLiquorIntro() {
               <video
                 autoPlay
                 muted
+                loop
                 playsInline
                 controls
                 preload="metadata"
