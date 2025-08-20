@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 import { Box, Typography, Link as MuiLink, Stack } from "@mui/material";
 import { FaFacebook } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -23,6 +24,10 @@ export default function Footer() {
       >
         <Typography variant="subtitle1" fontWeight="bold">
           {t("footer.organizer")}
+        </Typography>
+
+         <Typography variant="subtitle1" fontWeight="bold">
+          {t("footer.Sponsor")}
         </Typography>
 
         <Typography variant="body2">

@@ -22,13 +22,23 @@
   },
   
 
-  "footer": {
-  "organizer": "Organizer: Kinmen County Sports Association ｜ Taiwan World Folk Culture Association",
-  "copyright": "© 2025 Kinmen World Folk Dance Festival. All rights reserved.",
-  "facebook": "Share on Facebook",
-  "note": "🎉 We look forward to your enthusiastic participation. Let's dance the world together!"
-}
-,
+ "footer": {
+    "organizer": "Organizer: Kinmen County Sports Association ｜ Taiwan World Folk Culture Association",
+    "Sponsor": " Sponsor: Kinmen Kaoliang Liquor",
+    "copyright": "© 2025 Kinmen World Folk Dance Festival. All rights reserved.",
+    "facebook": "Share on Facebook",
+    "note": "🎉 We look forward to your enthusiastic participation. Let's dance the world together!"
+  },
+
+ 
+  "kkl": {
+  "title": "About Kinmen Kaoliang Liquor",
+  "imageAlt": "Kinmen Kaoliang Liquor promotional image",
+  "body1": "Founded in 1952, Kinmen Kaoliang Liquor (KKL) traces its origins to General Hu Lien, then Commander of the Kinmen Defense Command. Recognizing that Kinmen’s soil was ideal for dryland sorghum, he encouraged residents to cultivate sorghum for distillation, saving the cost of purchasing over 100,000 bottles of liquor each month to buy rice instead—a policy summarized as “burn sorghum stalks, eat rice, and drink kaoliang,” which helped forge the KKL legend.",
+  "body2": "Kinmen Kaoliang is crafted from premium sorghum and exceptionally pure water filtered through gneiss formations. The island’s maritime climate nurtures unique native yeasts. Using time-honored methods, KKL practices pure-grain, solid-state fermentation without blending, preserving its famed ‘no hangover’ character. Matured and refined in temperature- and humidity-controlled military tunnels, KKL develops a peerless flavor profile that has been recognized by top international spirits competitions.",
+  "link": "Visit KKL Official Site"
+},
+
   "about": {
     "title": "About Folk Dance",
     "paragraphs": [
@@ -49,11 +59,7 @@
     
     ]
   },
-  "promo": {
-  "title": "Festival Promo Videos",
-  "progress": "Video {{current}} of {{total}}"
-  },
-  
+
   "Title": "International Forum on World Folk Dance",
   "description": "Unlike previous events, this year’s program includes an international forum themed 'Local Transmission of World Folk Dance'. Given the significance of world folk dance in broadening global perspectives and promoting cultural integration, raising awareness and embedding it in daily life is essential. However, the current environment in Taiwan poses challenges for its promotion and inheritance. Therefore, this forum, hosted in Kinmen, brings together insights and experiences from global Chinese communities and international participants, aiming to provide valuable references for improving Taiwan’s cultural environment and transmission strategies.",
   "scheduleTitle": "Agenda of the 2025 International Forum on World Folk Dance",
