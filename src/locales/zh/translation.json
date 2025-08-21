@@ -107,23 +107,26 @@
   "show": {
   "title": "世界民俗舞蹈匯演",
   "description": "每屆活動的重頭戲均為「世界民俗舞蹈匯演」，本活動充分展現各社團平日例行活動的成果外，更有助於多層次的交流成效，相互的理解與協助就成為重要的交流成果。本次選定「金門文化局演藝廳」為民俗舞蹈匯演活動場地。預計邀請參與的國家（地區）華人團體包括：台灣、金門、香港、新加坡、馬來西亞、印尼、中國大陸等。",
+  "order": "演出順序",
   "group": "團體名稱",
   "region": "地區",
   "dance": "舞蹈",
   "choreographer": "編舞",
-  "remark": "＊團體若有增減再行調整。",
   "groups": [
-    { "name": "舞之心民俗舞蹈班", "region": "台中", "dance": "匈牙利", "choreographer": "歐光清老師" },
-    { "name": "愉快的舞者國際民俗舞蹈協會", "region": "高雄", "dance": "保加利亞", "choreographer": "盧毓宏老師" },
-    { "name": "風笛世界民俗舞團", "region": "高雄", "dance": "組曲", "choreographer": "林秋萍老師" },
-    { "name": "才藝坊", "region": "香港", "dance": "以色列", "choreographer": "李光華老師" },
-    { "name": "全藝/康藝坊", "region": "香港", "dance": "羅馬尼亞", "choreographer": "周全輝老師" },
-    { "name": "旭穎西方土風舞蹈團", "region": "香港", "dance": "蘇格蘭", "choreographer": "曾金全老師" },
-    { "name": "樂藝義工舞蹈團", "region": "香港", "dance": "中國", "choreographer": "陳德玉老師" },
-    { "name": "盈思舞蹈社", "region": "馬來西亞", "dance": "蘇格蘭", "choreographer": "吳國基老師" },
+    { "name": "金門天震堂醒獅團", "region": "金門", "dance": "傳統民俗技藝", "choreographer": "許績才老師" },
+    { "name": "金門伶舞者", "region": "金門", "dance": "中國", "choreographer": "江南韻老師" },
     { "name": "莆田學院土風舞社", "region": "莆田", "dance": "美國", "choreographer": "鄭若宜老師" },
+    { "name": "旭穎西方土風舞蹈團", "region": "香港", "dance": "蘇格蘭", "choreographer": "曾金全老師" },
+    { "name": "愉快的舞者國際民俗舞蹈協會", "region": "高雄", "dance": "保加利亞", "choreographer": "盧毓宏老師" },
     { "name": "金門棠風舞蹈團", "region": "金門", "dance": "金門鄉土", "choreographer": "邱驛棠老師" },
-    { "name": "金門天震堂醒獅團", "region": "金門", "dance": "傳統民俗技藝", "choreographer": "許績才老師" }
+    { "name": "風笛世界民俗舞團", "region": "高雄", "dance": "組曲", "choreographer": "林秋萍老師" },
+    { "name": "舞之心民俗舞蹈班", "region": "台中", "dance": "匈牙利", "choreographer": "歐光清老師" },
+    { "name": "金門伶舞者", "region": "金門", "dance": "爵士", "choreographer": "江南韻老師" },
+    { "name": "全藝/康藝坊", "region": "香港", "dance": "羅馬尼亞", "choreographer": "周全輝老師" },
+    { "name": "樂藝義工舞蹈團", "region": "香港", "dance": "中國", "choreographer": "陳德玉老師" },
+    { "name": "才藝坊", "region": "香港", "dance": "以色列", "choreographer": "李光華老師" },
+    { "name": "盈思舞蹈社", "region": "馬來西亞", "dance": "蘇格蘭", "choreographer": "吳國基老師" },
+    { "name": "金門棠風舞蹈團", "region": "金門", "dance": "金門鄉土", "choreographer": "邱驛棠老師" }
   ]
 },
   

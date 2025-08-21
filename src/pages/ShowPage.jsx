@@ -58,13 +58,14 @@ export default function ShowPage() {
             href={t("venue_show.name")}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#1976d2', textDecoration: 'underline' }}
+            style={{ color: "#1976d2", textDecoration: "underline" }}
           >
             {t("venue_show.linkText")}
           </a>
         </Typography>
       </Box>
 
+      {/* 表格區塊 */}
       <TableContainer
         component={Paper}
         sx={{ maxWidth: 1024, mx: "auto", mt: 4, overflowX: "auto" }}
@@ -72,37 +73,48 @@ export default function ShowPage() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.group")}</TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.region")}</TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.dance")}</TableCell>
-              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>{t("show.choreographer")}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                {t("show.order")}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                {t("show.group")}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                {t("show.region")}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                {t("show.dance")}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                {t("show.choreographer")}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {groups.map((item, idx) => (
               <TableRow key={idx}>
-                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.name}</TableCell>
-                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.region}</TableCell>
-                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.dance}</TableCell>
-                <TableCell align="center" sx={{ fontSize: "1rem" }}>{item.choreographer}</TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>
+                  {idx + 1}
+                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>
+                  {item.name}
+                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>
+                  {item.region}
+                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>
+                  {item.dance}
+                </TableCell>
+                <TableCell align="center" sx={{ fontSize: "1rem" }}>
+                  {item.choreographer}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
 
-      <Box
-        sx={{
-          maxWidth: 960,
-          mx: "auto",
-          mt: 4,
-          fontSize: "1.2rem",
-          lineHeight: 2,
-          textAlign: "justify",
-        }}
-      >
-        <p>{t("show.remark")}</p>
-      </Box>
+     
 
       <Box sx={{ mt: 6 }}>
         <BackHomeButton />
